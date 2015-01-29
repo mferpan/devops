@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 # Description: Containers management system
 
+checkRoot
 
 # Paths
 dirname=`dirname $0`
@@ -31,6 +32,9 @@ while true; do
 
 	# Create pending containers
 	checkPendingContainer
+
+    # Check current containers status
+	expireContainer
 
 	# Waiting next execution
 	sleep $DAEMON

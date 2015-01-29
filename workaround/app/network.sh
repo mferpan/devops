@@ -3,7 +3,7 @@
 
 function getIP () {
 	LAST_IP=`lxc-ls -f | grep -iv ipv | awk '{print $3}' | sort | tail -1 | awk -F. '{print $4}'`
-	if [ -z $LAST_IP ]; then
+	if [[ "${LAST_IP}" == ""]]; then
 		IP=$IP_START
 	else
 		IP=$NETWORK.$((LAST_IP+1))

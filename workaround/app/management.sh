@@ -53,18 +53,6 @@ function startContainer () {
 	fi
 }
 
-function removeContainer () {
-	local CONTAINER=$1
-	lxc-destroy --force -n $CONTAINER
-	
-	if [ $? -eq 0 ]; then
-		info "Removing container $CONTAINER"
-		return 0
-	else
-		error "Container $CONTAINER failed while removing"
-		return 1
-	fi
-}
 
 # updateContainer $containerID {disk,memory,cpu} $newSize
 function updateContainer () {
@@ -79,4 +67,7 @@ function updateContainer () {
 	info "updateContainer"
 }
 
+function checkRoot () {
+	[ $(id -u) != "0" ] && error "You are NOT root user" && exit 1
+}
 

@@ -28,16 +28,18 @@ DROP TABLE IF EXISTS containers;
 CREATE TABLE containers (
   id INT(30) NOT NULL AUTO_INCREMENT,
   user_id VARCHAR(32) NOT NULL,
-  container_type INT (1),
+  container_type VARCHAR (10),
   expiration_date DATETIME NOT NULL,
   creation_date TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  mac VARCHAR(10),
+  mac VARCHAR(18),
   ip_address VARCHAR(15),
+  root_password VARCHAR(12),
   PRIMARY KEY (id,user_id),
   KEY (id)
 ) ENGINE=InnoDB;
 
--- INSERT INTO containers (user_id,container_type,expiration_date,creation_date,mac,ip_address) VALUES ("bba6add9d96eeef2744452034dfa1933","FREE","2015-01-15 13:22:59",NOW(),"A8-26-66-41-B2-C3","10.10.0.2");
+INSERT INTO containers (user_id,container_type,expiration_date,creation_date,mac,ip_address,root_password) VALUES ("contenedor00","FREE","2016-01-15 13:22:59",NOW(),"A8-26-66-41-B2-C3","10.10.0.2","7asrya0sd8ah");
+INSERT INTO containers (user_id,container_type,expiration_date,creation_date,mac,ip_address,root_password) VALUES ("contenedor01","FREE","2014-01-15 13:22:59",NOW(),"A8-27-33-41-B2-C3","10.10.0.3","7asrya0sd8ah");
 
 
 /*
@@ -54,9 +56,10 @@ CREATE TABLE pending_containers (
   KEY (id)
 ) ENGINE=InnoDB;
 
-INSERT INTO pending_containers (user_id,container_type,template,expiration_date) VALUES ("node1","FREE","centos","2015-01-15 13:22:59");
-INSERT INTO pending_containers (user_id,container_type,template,expiration_date) VALUES ("node2","FREE","centos","2015-01-15 13:22:59");
-INSERT INTO pending_containers (user_id,container_type,template,expiration_date) VALUES ("node3","FREE","centos","2015-01-15 13:22:59");
+INSERT INTO pending_containers (user_id,container_type,template,expiration_date) VALUES ("container1","FREE","centos","2015-01-15 13:22:59");
+INSERT INTO pending_containers (user_id,container_type,template,expiration_date) VALUES ("container2","FREE","centos","2015-01-15 13:22:59");
+INSERT INTO pending_containers (user_id,container_type,template,expiration_date) VALUES ("container3","FREE","centos","2015-01-15 13:22:59");
+
 
 /*
  *  TABLE CONTAINER_DEFINITION, DESCRIBE FOUR CONTAINERS TYPE
@@ -122,3 +125,4 @@ INSERT INTO lxc_templates (name) VALUES ("plamo");
 INSERT INTO lxc_templates (name) VALUES ("sshd");
 INSERT INTO lxc_templates (name) VALUES ("ubuntu");
 INSERT INTO lxc_templates (name) VALUES ("ubuntu");
+
