@@ -1,54 +1,22 @@
 #!/usr/bin/env bash
 # Description: Manage containers opereations
 
-function unfreezeContainer () {
+function containerOperation () {
 	local CONTAINER=$1
-	lxc-unfreeze -n $CONTAINER
-	
-	if [ $? -eq 0 ]; then
-		info "Unfreezing container $CONTAINER"
-		return 0
-	else
-		error "Container $CONTAINER failed while unfreezing"
-		return 1
-	fi
-}
-
-function freezeContainer () {
-	local CONTAINER=$1
-	lxc-freeze -n $CONTAINER
-	
-	if [ $? -eq 0 ]; then
-		info "Freezving container $CONTAINER"
-		return 0
-	else
-		error "Container $CONTAINER failed while freezing"
-		return 1
-	fi
-}
-
-function stopContainer () {
-	local CONTAINER=$1
-	lxc-stop --force -n $CONTAINER
-	
-	if [ $? -eq 0 ]; then
-		info "Removing container $CONTAINER"
-		return 0
-	else
-		error "Container $CONTAINER failed while removing"
-		return 1
-	fi
-}
-
-function startContainer () {
-	local CONTAINER=$1
-	lxc-start -dn $CONTAINER
+	local OPERATION=$2
+	case $OPERATION in
+		freeze) lxc-unfreeze -n $CONTAINER ;;
+        unfreeze) lxc-unfreeze -n $CONTAINER ;;
+        stop) lxc-stop --force -n $CONTAINER ;;
+        start) lxc-start -dn $CONTAINER ;;
+        *) error "Invalid Operation $OPERATION" && return 1 ;;
+    esac
 
 	if [ $? -eq 0 ]; then
-		info "Starting container $CONTAINER"
+		info "$OPERATION operation over container $CONTAINER"
 		return 0
 	else
-		error "Container $CONTAINER failed while starting"
+		error "Container $CONTAINER failed while $OPERATION"
 		return 1
 	fi
 }

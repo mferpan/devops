@@ -63,7 +63,7 @@ function createContainer () {
 		generateContainer $TEMPLATE $USER_ID
 		[ $? -ne 0 ] && error "Storage generation FAILED" && exit 1
 
-		info "Determine new IP Address"
+		info "Generating new IP Address"
 		getIP
 
 		info "Setting Password"
