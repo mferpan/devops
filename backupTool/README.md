@@ -1,6 +1,5 @@
 # tree
-.
-
+        .
         +-- bin
         │   +-- company.service.sh -> service.sh
         │   +-- service.sh
