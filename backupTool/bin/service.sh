@@ -11,11 +11,12 @@ filename=${basename%\.*}
 
 USER_COMMAND=`echo $1 | tr '[:upper:]' '[:lower:]'`
 USER_OBJECTS=$2  # Servers list
+BACKUP_DIR=`readlink -f $dirname/../backups`
+[ ! -d $BACKUP_DIR ] && echo -e "[ERROR]: $BACKUP_DIR directory does not exist or is not readable" && mkdir -p `readlink -f $dirname/../backups`
 
 # Validation Area
 [ ! -L $dirname/$basename ] && echo -e "[ERROR]: This script must be executed using environment symlinks in `readlink -m $dirname`" && exit 1
 [ ! -d $LIB_DIR ] && echo -e "[ERROR]: $LIB_DIR directory does not exist or is not readable" && exit 1
-[ ! -d $LOG_DIR ] && echo -e "[ERROR]: $LOG_DIR directory does not exist or is not readable" && exit 1
 [ ! -d $CONFIG_DIR ] && echo -e "[ERROR]: $CONFIG_DIR directory does not exist or is not readable" && exit 1
 TARGET_SERVERS=$USER_OBJECTS
 
@@ -23,7 +24,11 @@ ENVIRONMENT=`echo $basename | awk -F\. '{print $1}'`
 LIB_DIR=`readlink -f $dirname/../lib`
 CONFIG_DIR=`readlink -f $dirname/../config`
 CONFIG_FILE=$CONFIG_DIR/$ENVIRONMENT/main.config
+
+
+
 LOG_DIR=`readlink -f $dirname/../logs`
+[ ! -d $LOG_DIR ] && echo -e "[ERROR]: $LOG_DIR directory does not exist or is not readable" && mkdir -p `readlink -f $dirname/../logs`
 [ "$USER_COMMAND" = "backup" ] && LOG_FILE=$LOG_DIR/$filename.$USER_COMMAND.$DATE.log
 
 # Load config

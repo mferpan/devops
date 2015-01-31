@@ -3,7 +3,6 @@
 function filesystem_backup {
   local server=$1
   local DATE=`date "+%Y%m%d-%H%M%S"`
-  EMAIL=sistemas@emergya.com
 
   get_object_parameter $server ip $SERVERS_CONFIG
   [ -z $VALUE ] && server_ip=$server || server_ip=$VALUE
