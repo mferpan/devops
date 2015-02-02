@@ -1,10 +1,10 @@
 # tree
         .
         +-- bin
-        │   +-- company.service.sh -> service.sh
+        │   +-- environment.service.sh -> service.sh
         │   +-- service.sh
         +-- config
-        │   +-- company
+        │   +-- environment
         │       +-- backup
         │       │   +-- centosChef
         │       │       +-- exclude.static
