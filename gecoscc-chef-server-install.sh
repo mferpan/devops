@@ -18,7 +18,7 @@ grep -q "$HOSTNAME" /etc/hosts || sed -i "s|\(127.0.0.1.*\)|\1 $HOSTNAME|g" /etc
 # if we are in a "yum-able" system, install EPEL depend needed for 'rvm' install
 which yum && yum install -y http://dl.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-8.noarch.rpm
 
-# Inserted Recipe(s) will processed
+# Inserted Recipe(s) will be processed
 [ ! "$#" -ge 1 ] && echo "[ERROR]: Missing Parameter (-1) - exiting..." && exit 1
 myArray=( "$@" )
 for ((index=0; index<${#myArray[@]}; index++)); do
