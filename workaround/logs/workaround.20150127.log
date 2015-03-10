@@ -1,0 +1,129 @@
+[mar ene 27 20:38:31 CET 2015] [1m[32m[INFO] Compressing old log files. Executing command: find /home/moro/proyectos/devops/workaround/logs -name workaround.*.log -type f -mtime +1 -exec bzip2 -v {} \;[1m[0m
+[mar ene 27 20:38:31 CET 2015] [1m[32m[INFO] ANY log files compressed[1m[0m
+[mar ene 27 20:38:31 CET 2015] [1m[32m[INFO] Deleting old log files. Executing command: find /home/moro/proyectos/devops/workaround/logs -name workaround.*.log -type f -mtime +365 -exec rm -vf {} \;[1m[0m
+[mar ene 27 20:38:31 CET 2015] [1m[32m[INFO] ANY old log files deleted[1m[0m
+[mar ene 27 20:38:31 CET 2015] [1m[32m[INFO] Looking for pending containers creation[1m[0m
+[mar ene 27 20:38:31 CET 2015] [1m[32m[INFO] Found 3 containers to be processed: Starting[1m[0m
+[mar ene 27 20:38:32 CET 2015] [1m[32m[INFO] Pending container "1" generation started[1m[0m
+[mar ene 27 20:38:32 CET 2015] [1m[32m[INFO] Step 1: Create Storage[1m[0m
+[mar ene 27 20:38:32 CET 2015] [1m[31m[ERROR] Something was wrong with storage generation[1m[0m
+[mar ene 27 20:38:32 CET 2015] [1m[31m[ERROR] Storage generation FAILED[1m[0m
+[mar ene 27 20:40:19 CET 2015] [1m[32m[INFO] Compressing old log files. Executing command: find /home/moro/proyectos/devops/workaround/logs -name workaround.*.log -type f -mtime +1 -exec bzip2 -v {} \;[1m[0m
+[mar ene 27 20:40:19 CET 2015] [1m[32m[INFO] ANY log files compressed[1m[0m
+[mar ene 27 20:40:19 CET 2015] [1m[32m[INFO] Deleting old log files. Executing command: find /home/moro/proyectos/devops/workaround/logs -name workaround.*.log -type f -mtime +365 -exec rm -vf {} \;[1m[0m
+[mar ene 27 20:40:19 CET 2015] [1m[32m[INFO] ANY old log files deleted[1m[0m
+[mar ene 27 20:40:19 CET 2015] [1m[32m[INFO] Looking for pending containers creation[1m[0m
+[mar ene 27 20:40:19 CET 2015] [1m[32m[INFO] Found 3 containers to be processed: Starting[1m[0m
+[mar ene 27 20:40:19 CET 2015] [1m[32m[INFO] Pending container "1" generation started[1m[0m
+[mar ene 27 20:40:19 CET 2015] [1m[32m[INFO] Step 1: Create Storage[1m[0m
+[mar ene 27 20:40:19 CET 2015] [1m[31m[ERROR] Something was wrong with storage generation[1m[0m
+[mar ene 27 20:40:19 CET 2015] [1m[31m[ERROR] Storage generation FAILED[1m[0m
+[mar ene 27 20:41:12 CET 2015] [1m[32m[INFO] Compressing old log files. Executing command: find /home/moro/proyectos/devops/workaround/logs -name workaround.*.log -type f -mtime +1 -exec bzip2 -v {} \;[1m[0m
+[mar ene 27 20:41:12 CET 2015] [1m[32m[INFO] ANY log files compressed[1m[0m
+[mar ene 27 20:41:12 CET 2015] [1m[32m[INFO] Deleting old log files. Executing command: find /home/moro/proyectos/devops/workaround/logs -name workaround.*.log -type f -mtime +365 -exec rm -vf {} \;[1m[0m
+[mar ene 27 20:41:12 CET 2015] [1m[32m[INFO] ANY old log files deleted[1m[0m
+[mar ene 27 20:41:12 CET 2015] [1m[32m[INFO] Looking for pending containers creation[1m[0m
+[mar ene 27 20:41:12 CET 2015] [1m[32m[INFO] Found 3 containers to be processed: Starting[1m[0m
+[mar ene 27 20:41:12 CET 2015] [1m[32m[INFO] Pending container "1" generation started[1m[0m
+[mar ene 27 20:41:12 CET 2015] [1m[32m[INFO] Step 1: Create Storage[1m[0m
+[mar ene 27 20:41:12 CET 2015] [1m[31m[ERROR] Something was wrong with storage generation[1m[0m
+[mar ene 27 20:41:12 CET 2015] [1m[31m[ERROR] Storage generation FAILED[1m[0m
+[mar ene 27 20:42:21 CET 2015] [1m[32m[INFO] Compressing old log files. Executing command: find /home/moro/proyectos/devops/workaround/logs -name workaround.*.log -type f -mtime +1 -exec bzip2 -v {} \;[1m[0m
+[mar ene 27 20:42:21 CET 2015] [1m[32m[INFO] ANY log files compressed[1m[0m
+[mar ene 27 20:42:21 CET 2015] [1m[32m[INFO] Deleting old log files. Executing command: find /home/moro/proyectos/devops/workaround/logs -name workaround.*.log -type f -mtime +365 -exec rm -vf {} \;[1m[0m
+[mar ene 27 20:42:21 CET 2015] [1m[32m[INFO] ANY old log files deleted[1m[0m
+[mar ene 27 20:42:21 CET 2015] [1m[32m[INFO] Looking for pending containers creation[1m[0m
+[mar ene 27 20:42:21 CET 2015] [1m[32m[INFO] Found 3 containers to be processed: Starting[1m[0m
+[mar ene 27 20:42:21 CET 2015] [1m[32m[INFO] Pending container "1" generation started[1m[0m
+[mar ene 27 20:42:21 CET 2015] [1m[32m[INFO] Step 1: Create Storage[1m[0m
+[mar ene 27 20:42:24 CET 2015] [1m[32m[INFO] Storage container1 generated[1m[0m
+[mar ene 27 20:42:24 CET 2015] [1m[32m[INFO] Step 2: Container Installation[1m[0m
+[mar ene 27 20:43:36 CET 2015] [1m[32m[INFO] Determine new IP Address[1m[0m
+[mar ene 27 20:43:36 CET 2015] [1m[32m[INFO] Setting Password[1m[0m
+[] [1m[31m[ERROR] Failed setting password[1m[0m
+[mar ene 27 20:43:36 CET 2015] [1m[32m[INFO] Pending container "2" generation started[1m[0m
+[mar ene 27 20:43:36 CET 2015] [1m[32m[INFO] Step 1: Create Storage[1m[0m
+[mar ene 27 20:43:40 CET 2015] [1m[32m[INFO] Storage container2 generated[1m[0m
+[mar ene 27 20:43:40 CET 2015] [1m[32m[INFO] Step 2: Container Installation[1m[0m
+[mar ene 27 20:43:44 CET 2015] [1m[32m[INFO] Determine new IP Address[1m[0m
+[mar ene 27 20:43:44 CET 2015] [1m[32m[INFO] Setting Password[1m[0m
+[] [1m[31m[ERROR] Failed setting password[1m[0m
+[mar ene 27 20:43:45 CET 2015] [1m[32m[INFO] Pending container "3" generation started[1m[0m
+[mar ene 27 20:43:45 CET 2015] [1m[32m[INFO] Step 1: Create Storage[1m[0m
+[mar ene 27 20:43:50 CET 2015] [1m[32m[INFO] Storage container3 generated[1m[0m
+[mar ene 27 20:43:50 CET 2015] [1m[32m[INFO] Step 2: Container Installation[1m[0m
+[mar ene 27 20:43:57 CET 2015] [1m[32m[INFO] Determine new IP Address[1m[0m
+[mar ene 27 20:43:57 CET 2015] [1m[32m[INFO] Setting Password[1m[0m
+[] [1m[31m[ERROR] Failed setting password[1m[0m
+[mar ene 27 20:43:57 CET 2015] [1m[32m[INFO] Removing expired containers[1m[0m
+[mar ene 27 20:43:57 CET 2015] [1m[32m[INFO] Removing 2 container id, owner contenedor01[1m[0m
+[mar ene 27 20:43:57 CET 2015] [1m[32m[INFO] Removing 2 container id, owner container1[1m[0m
+[mar ene 27 20:43:59 CET 2015] [1m[31m[ERROR] Something was wrong while lvremove[1m[0m
+[mar ene 27 20:43:59 CET 2015] [1m[32m[INFO] Removed //var/lib/lxc\/container1 line from /etc/fstab file[1m[0m
+[mar ene 27 20:43:59 CET 2015] [1m[32m[INFO] Removing /var/lib/lxc/container1 with rm -fr[1m[0m
+[mar ene 27 20:43:59 CET 2015] [1m[32m[INFO] Removing 2 container id, owner container2[1m[0m
+[mar ene 27 20:44:01 CET 2015] [1m[31m[ERROR] Something was wrong while lvremove[1m[0m
+[mar ene 27 20:44:01 CET 2015] [1m[32m[INFO] Removed //var/lib/lxc\/container2 line from /etc/fstab file[1m[0m
+[mar ene 27 20:44:01 CET 2015] [1m[32m[INFO] Removing /var/lib/lxc/container2 with rm -fr[1m[0m
+[mar ene 27 20:44:01 CET 2015] [1m[32m[INFO] Removing 2 container id, owner container3[1m[0m
+[mar ene 27 20:44:06 CET 2015] [1m[31m[ERROR] Something was wrong while lvremove[1m[0m
+[mar ene 27 20:44:06 CET 2015] [1m[32m[INFO] Removed //var/lib/lxc\/container3 line from /etc/fstab file[1m[0m
+[mar ene 27 20:44:06 CET 2015] [1m[32m[INFO] Removing /var/lib/lxc/container3 with rm -fr[1m[0m
+[mar ene 27 20:44:06 CET 2015] [1m[32m[INFO] Removing 3 container id, owner contenedor01[1m[0m
+[mar ene 27 20:44:06 CET 2015] [1m[32m[INFO] Removing 3 container id, owner container1[1m[0m
+[mar ene 27 20:44:06 CET 2015] [1m[32m[INFO] Removing 3 container id, owner container2[1m[0m
+[mar ene 27 20:44:06 CET 2015] [1m[32m[INFO] Removing 3 container id, owner container3[1m[0m
+[mar ene 27 20:44:06 CET 2015] [1m[32m[INFO] Removing 4 container id, owner contenedor01[1m[0m
+[mar ene 27 20:44:06 CET 2015] [1m[32m[INFO] Removing 4 container id, owner container1[1m[0m
+[mar ene 27 20:44:06 CET 2015] [1m[32m[INFO] Removing 4 container id, owner container2[1m[0m
+[mar ene 27 20:44:06 CET 2015] [1m[32m[INFO] Removing 4 container id, owner container3[1m[0m
+[mar ene 27 20:44:06 CET 2015] [1m[32m[INFO] Removing 5 container id, owner contenedor01[1m[0m
+[mar ene 27 20:44:06 CET 2015] [1m[32m[INFO] Removing 5 container id, owner container1[1m[0m
+[mar ene 27 20:44:06 CET 2015] [1m[32m[INFO] Removing 5 container id, owner container2[1m[0m
+[mar ene 27 20:44:06 CET 2015] [1m[32m[INFO] Removing 5 container id, owner container3[1m[0m
+[mar ene 27 20:49:06 CET 2015] [1m[32m[INFO] Compressing old log files. Executing command: find /home/moro/proyectos/devops/workaround/logs -name workaround.*.log -type f -mtime +1 -exec bzip2 -v {} \;[1m[0m
+[mar ene 27 20:49:06 CET 2015] [1m[32m[INFO] ANY log files compressed[1m[0m
+[mar ene 27 20:49:06 CET 2015] [1m[32m[INFO] Deleting old log files. Executing command: find /home/moro/proyectos/devops/workaround/logs -name workaround.*.log -type f -mtime +365 -exec rm -vf {} \;[1m[0m
+[mar ene 27 20:49:06 CET 2015] [1m[32m[INFO] ANY old log files deleted[1m[0m
+[mar ene 27 20:49:06 CET 2015] [1m[32m[INFO] Looking for pending containers creation[1m[0m
+[mar ene 27 20:49:06 CET 2015] [1m[32m[INFO] Found 0 containers[1m[0m
+[mar ene 27 20:49:06 CET 2015] [1m[32m[INFO] Removing expired containers[1m[0m
+[mar ene 27 20:49:06 CET 2015] [1m[32m[INFO] Removing 2 container id, owner contenedor01[1m[0m
+[mar ene 27 20:49:06 CET 2015] [1m[32m[INFO] Removing 2 container id, owner container1[1m[0m
+[mar ene 27 20:49:06 CET 2015] [1m[32m[INFO] Removing 2 container id, owner container2[1m[0m
+[mar ene 27 20:49:06 CET 2015] [1m[32m[INFO] Removing 2 container id, owner container3[1m[0m
+[mar ene 27 20:49:06 CET 2015] [1m[32m[INFO] Removing 3 container id, owner contenedor01[1m[0m
+[mar ene 27 20:49:06 CET 2015] [1m[32m[INFO] Removing 3 container id, owner container1[1m[0m
+[mar ene 27 20:49:06 CET 2015] [1m[32m[INFO] Removing 3 container id, owner container2[1m[0m
+[mar ene 27 20:49:06 CET 2015] [1m[32m[INFO] Removing 3 container id, owner container3[1m[0m
+[mar ene 27 20:49:06 CET 2015] [1m[32m[INFO] Removing 4 container id, owner contenedor01[1m[0m
+[mar ene 27 20:49:06 CET 2015] [1m[32m[INFO] Removing 4 container id, owner container1[1m[0m
+[mar ene 27 20:49:06 CET 2015] [1m[32m[INFO] Removing 4 container id, owner container2[1m[0m
+[mar ene 27 20:49:06 CET 2015] [1m[32m[INFO] Removing 4 container id, owner container3[1m[0m
+[mar ene 27 20:49:06 CET 2015] [1m[32m[INFO] Removing 5 container id, owner contenedor01[1m[0m
+[mar ene 27 20:49:06 CET 2015] [1m[32m[INFO] Removing 5 container id, owner container1[1m[0m
+[mar ene 27 20:49:06 CET 2015] [1m[32m[INFO] Removing 5 container id, owner container2[1m[0m
+[mar ene 27 20:49:06 CET 2015] [1m[32m[INFO] Removing 5 container id, owner container3[1m[0m
+[mar ene 27 20:54:06 CET 2015] [1m[32m[INFO] Compressing old log files. Executing command: find /home/moro/proyectos/devops/workaround/logs -name workaround.*.log -type f -mtime +1 -exec bzip2 -v {} \;[1m[0m
+[mar ene 27 20:54:06 CET 2015] [1m[32m[INFO] ANY log files compressed[1m[0m
+[mar ene 27 20:54:06 CET 2015] [1m[32m[INFO] Deleting old log files. Executing command: find /home/moro/proyectos/devops/workaround/logs -name workaround.*.log -type f -mtime +365 -exec rm -vf {} \;[1m[0m
+[mar ene 27 20:54:06 CET 2015] [1m[32m[INFO] ANY old log files deleted[1m[0m
+[mar ene 27 20:54:06 CET 2015] [1m[32m[INFO] Looking for pending containers creation[1m[0m
+[mar ene 27 20:54:06 CET 2015] [1m[32m[INFO] Found 0 containers[1m[0m
+[mar ene 27 20:54:06 CET 2015] [1m[32m[INFO] Removing expired containers[1m[0m
+[mar ene 27 20:54:06 CET 2015] [1m[32m[INFO] Removing 2 container id, owner contenedor01[1m[0m
+[mar ene 27 20:54:06 CET 2015] [1m[32m[INFO] Removing 2 container id, owner container1[1m[0m
+[mar ene 27 20:54:06 CET 2015] [1m[32m[INFO] Removing 2 container id, owner container2[1m[0m
+[mar ene 27 20:54:06 CET 2015] [1m[32m[INFO] Removing 2 container id, owner container3[1m[0m
+[mar ene 27 20:54:06 CET 2015] [1m[32m[INFO] Removing 3 container id, owner contenedor01[1m[0m
+[mar ene 27 20:54:06 CET 2015] [1m[32m[INFO] Removing 3 container id, owner container1[1m[0m
+[mar ene 27 20:54:06 CET 2015] [1m[32m[INFO] Removing 3 container id, owner container2[1m[0m
+[mar ene 27 20:54:06 CET 2015] [1m[32m[INFO] Removing 3 container id, owner container3[1m[0m
+[mar ene 27 20:54:06 CET 2015] [1m[32m[INFO] Removing 4 container id, owner contenedor01[1m[0m
+[mar ene 27 20:54:06 CET 2015] [1m[32m[INFO] Removing 4 container id, owner container1[1m[0m
+[mar ene 27 20:54:06 CET 2015] [1m[32m[INFO] Removing 4 container id, owner container2[1m[0m
+[mar ene 27 20:54:06 CET 2015] [1m[32m[INFO] Removing 4 container id, owner container3[1m[0m
+[mar ene 27 20:54:06 CET 2015] [1m[32m[INFO] Removing 5 container id, owner contenedor01[1m[0m
+[mar ene 27 20:54:06 CET 2015] [1m[32m[INFO] Removing 5 container id, owner container1[1m[0m
+[mar ene 27 20:54:06 CET 2015] [1m[32m[INFO] Removing 5 container id, owner container2[1m[0m
+[mar ene 27 20:54:06 CET 2015] [1m[32m[INFO] Removing 5 container id, owner container3[1m[0m

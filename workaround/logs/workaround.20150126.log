@@ -1,0 +1,312 @@
+[lun ene 26 21:43:22 CET 2015] [1m[32m[INFO] Compressing old log files. Executing command: find /home/moro/proyectos/devops/workaround/logs -name workaround.*.log -type f -mtime +1 -exec bzip2 -v {} \;[1m[0m
+[lun ene 26 21:43:22 CET 2015] [1m[32m[INFO] ANY log files compressed[1m[0m
+[lun ene 26 21:43:22 CET 2015] [1m[32m[INFO] Deleting old log files. Executing command: find /home/moro/proyectos/devops/workaround/logs -name workaround.*.log -type f -mtime +365 -exec rm -vf {} \;[1m[0m
+[lun ene 26 21:43:22 CET 2015] [1m[32m[INFO] ANY old log files deleted[1m[0m
+[lun ene 26 21:43:22 CET 2015] [1m[32m[INFO] Check current containers[1m[0m
+[lun ene 26 21:43:22 CET 2015] [1m[32m[INFO] -----------------> 1[1m[0m
+[lun ene 26 21:43:22 CET 2015] [1m[32m[INFO] -----------------> 2[1m[0m
+[lun ene 26 21:44:54 CET 2015] [1m[32m[INFO] Compressing old log files. Executing command: find /home/moro/proyectos/devops/workaround/logs -name workaround.*.log -type f -mtime +1 -exec bzip2 -v {} \;[1m[0m
+[lun ene 26 21:44:54 CET 2015] [1m[32m[INFO] ANY log files compressed[1m[0m
+[lun ene 26 21:44:54 CET 2015] [1m[32m[INFO] Deleting old log files. Executing command: find /home/moro/proyectos/devops/workaround/logs -name workaround.*.log -type f -mtime +365 -exec rm -vf {} \;[1m[0m
+[lun ene 26 21:44:54 CET 2015] [1m[32m[INFO] ANY old log files deleted[1m[0m
+[lun ene 26 21:44:54 CET 2015] [1m[32m[INFO] Check current containers[1m[0m
+[lun ene 26 21:44:54 CET 2015] [1m[32m[INFO] -----------------> 2[1m[0m
+[lun ene 26 21:45:21 CET 2015] [1m[32m[INFO] Compressing old log files. Executing command: find /home/moro/proyectos/devops/workaround/logs -name workaround.*.log -type f -mtime +1 -exec bzip2 -v {} \;[1m[0m
+[lun ene 26 21:45:21 CET 2015] [1m[32m[INFO] ANY log files compressed[1m[0m
+[lun ene 26 21:45:21 CET 2015] [1m[32m[INFO] Deleting old log files. Executing command: find /home/moro/proyectos/devops/workaround/logs -name workaround.*.log -type f -mtime +365 -exec rm -vf {} \;[1m[0m
+[lun ene 26 21:45:21 CET 2015] [1m[32m[INFO] ANY old log files deleted[1m[0m
+[lun ene 26 21:45:21 CET 2015] [1m[32m[INFO] Looking for pending containers creation[1m[0m
+[lun ene 26 21:45:21 CET 2015] [1m[32m[INFO] Found 3 containers to be processed: Starting[1m[0m
+[lun ene 26 21:45:21 CET 2015] [1m[32m[INFO] Pending container "1" generation started[1m[0m
+[lun ene 26 21:45:21 CET 2015] [1m[32m[INFO] Step 1: Create Storage[1m[0m
+[lun ene 26 21:45:21 CET 2015] [1m[31m[ERROR] There is NO volgroup with FREE available[1m[0m
+[lun ene 26 21:45:46 CET 2015] [1m[32m[INFO] Compressing old log files. Executing command: find /home/moro/proyectos/devops/workaround/logs -name workaround.*.log -type f -mtime +1 -exec bzip2 -v {} \;[1m[0m
+[lun ene 26 21:45:46 CET 2015] [1m[32m[INFO] Log compression completed. Result was:[1m[0m
+[lun ene 26 21:45:46 CET 2015] [1m[32m[INFO] +++ find /home/moro/proyectos/devops/workaround/logs -name 'workaround.*.log' -type f -mtime +1 -exec bzip2 -v '{}' ';'[1m[0m
+[lun ene 26 21:45:46 CET 2015] [1m[32m[INFO] Deleting old log files. Executing command: find /home/moro/proyectos/devops/workaround/logs -name workaround.*.log -type f -mtime +365 -exec rm -vf {} \;[1m[0m
+[lun ene 26 21:45:46 CET 2015] [1m[32m[INFO] Old log deletion completed. Result was:[1m[0m
+[lun ene 26 21:45:46 CET 2015] [1m[32m[INFO] +++ find /home/moro/proyectos/devops/workaround/logs -name 'workaround.*.log' -type f -mtime +365 -exec rm -vf '{}' ';'[1m[0m
+[lun ene 26 21:45:46 CET 2015] [1m[32m[INFO] Looking for pending containers creation[1m[0m
+[lun ene 26 21:45:46 CET 2015] [1m[32m[INFO] Found 3 containers to be processed: Starting[1m[0m
+[lun ene 26 21:45:46 CET 2015] [1m[32m[INFO] Pending container "1" generation started[1m[0m
+[lun ene 26 21:45:46 CET 2015] [1m[32m[INFO] Step 1: Create Storage[1m[0m
+[lun ene 26 21:45:56 CET 2015] [1m[32m[INFO] Storage node1 generated[1m[0m
+[lun ene 26 21:45:56 CET 2015] [1m[32m[INFO] Step 2: Container Installation[1m[0m
+[lun ene 26 21:46:59 CET 2015] [1m[32m[INFO] Determine new IP Address[1m[0m
+[lun ene 26 21:46:59 CET 2015] [1m[32m[INFO] Pending container "2" generation started[1m[0m
+[lun ene 26 21:46:59 CET 2015] [1m[32m[INFO] Step 1: Create Storage[1m[0m
+[lun ene 26 21:47:20 CET 2015] [1m[32m[INFO] Storage node2 generated[1m[0m
+[lun ene 26 21:47:20 CET 2015] [1m[32m[INFO] Step 2: Container Installation[1m[0m
+[lun ene 26 21:47:28 CET 2015] [1m[32m[INFO] Determine new IP Address[1m[0m
+[lun ene 26 21:47:28 CET 2015] [1m[32m[INFO] Pending container "3" generation started[1m[0m
+[lun ene 26 21:47:28 CET 2015] [1m[32m[INFO] Step 1: Create Storage[1m[0m
+[lun ene 26 21:47:33 CET 2015] [1m[32m[INFO] Storage node3 generated[1m[0m
+[lun ene 26 21:47:33 CET 2015] [1m[32m[INFO] Step 2: Container Installation[1m[0m
+[lun ene 26 21:47:40 CET 2015] [1m[32m[INFO] Determine new IP Address[1m[0m
+[lun ene 26 21:47:41 CET 2015] [1m[32m[INFO] Check current containers[1m[0m
+[lun ene 26 21:47:41 CET 2015] [1m[32m[INFO] -----------------> 2[1m[0m
+[lun ene 26 21:47:41 CET 2015] [1m[32m[INFO] -----------------> 3[1m[0m
+[lun ene 26 21:47:41 CET 2015] [1m[32m[INFO] -----------------> 4[1m[0m
+[lun ene 26 21:47:41 CET 2015] [1m[32m[INFO] -----------------> 5[1m[0m
+[lun ene 26 22:03:10 CET 2015] [1m[32m[INFO] Compressing old log files. Executing command: find /home/moro/proyectos/devops/workaround/logs -name workaround.*.log -type f -mtime +1 -exec bzip2 -v {} \;[1m[0m
+[lun ene 26 22:03:10 CET 2015] [1m[32m[INFO] ANY log files compressed[1m[0m
+[lun ene 26 22:03:10 CET 2015] [1m[32m[INFO] Deleting old log files. Executing command: find /home/moro/proyectos/devops/workaround/logs -name workaround.*.log -type f -mtime +365 -exec rm -vf {} \;[1m[0m
+[lun ene 26 22:03:10 CET 2015] [1m[32m[INFO] ANY old log files deleted[1m[0m
+[lun ene 26 22:03:10 CET 2015] [1m[32m[INFO] Looking for pending containers creation[1m[0m
+[lun ene 26 22:03:10 CET 2015] [1m[32m[INFO] Found 3 containers to be processed: Starting[1m[0m
+[lun ene 26 22:03:10 CET 2015] [1m[32m[INFO] Pending container "1" generation started[1m[0m
+[lun ene 26 22:03:10 CET 2015] [1m[32m[INFO] Step 1: Create Storage[1m[0m
+[lun ene 26 22:11:13 CET 2015] [1m[32m[INFO] Compressing old log files. Executing command: find /home/moro/proyectos/devops/workaround/logs -name workaround.*.log -type f -mtime +1 -exec bzip2 -v {} \;[1m[0m
+[lun ene 26 22:11:13 CET 2015] [1m[32m[INFO] ANY log files compressed[1m[0m
+[lun ene 26 22:11:13 CET 2015] [1m[32m[INFO] Deleting old log files. Executing command: find /home/moro/proyectos/devops/workaround/logs -name workaround.*.log -type f -mtime +365 -exec rm -vf {} \;[1m[0m
+[lun ene 26 22:11:13 CET 2015] [1m[32m[INFO] ANY old log files deleted[1m[0m
+[lun ene 26 22:11:13 CET 2015] [1m[32m[INFO] Looking for pending containers creation[1m[0m
+[lun ene 26 22:11:13 CET 2015] [1m[32m[INFO] Found 3 containers to be processed: Starting[1m[0m
+[lun ene 26 22:11:13 CET 2015] [1m[32m[INFO] Pending container "1" generation started[1m[0m
+[lun ene 26 22:11:13 CET 2015] [1m[32m[INFO] Step 1: Create Storage[1m[0m
+[lun ene 26 22:11:15 CET 2015] [1m[32m[INFO] Storage contenedor1 generated[1m[0m
+[lun ene 26 22:11:15 CET 2015] [1m[32m[INFO] Step 2: Container Installation[1m[0m
+[lun ene 26 22:11:18 CET 2015] [1m[32m[INFO] Determine new IP Address[1m[0m
+[lun ene 26 22:11:18 CET 2015] [1m[32m[INFO] Pending container "2" generation started[1m[0m
+[lun ene 26 22:11:18 CET 2015] [1m[32m[INFO] Step 1: Create Storage[1m[0m
+[lun ene 26 22:11:21 CET 2015] [1m[32m[INFO] Storage contenedor2 generated[1m[0m
+[lun ene 26 22:11:21 CET 2015] [1m[32m[INFO] Step 2: Container Installation[1m[0m
+[lun ene 26 22:11:30 CET 2015] [1m[32m[INFO] Determine new IP Address[1m[0m
+[lun ene 26 22:11:31 CET 2015] [1m[32m[INFO] Pending container "3" generation started[1m[0m
+[lun ene 26 22:11:31 CET 2015] [1m[32m[INFO] Step 1: Create Storage[1m[0m
+[lun ene 26 22:11:37 CET 2015] [1m[32m[INFO] Storage contenedor3 generated[1m[0m
+[lun ene 26 22:11:37 CET 2015] [1m[32m[INFO] Step 2: Container Installation[1m[0m
+[lun ene 26 22:11:43 CET 2015] [1m[32m[INFO] Determine new IP Address[1m[0m
+[lun ene 26 22:11:43 CET 2015] [1m[32m[INFO] Check current containers[1m[0m
+[lun ene 26 22:11:43 CET 2015] [1m[32m[INFO] -----------------> 2[1m[0m
+[lun ene 26 22:11:43 CET 2015] [1m[32m[INFO] -----------------> 3[1m[0m
+[lun ene 26 22:11:43 CET 2015] [1m[32m[INFO] -----------------> 4[1m[0m
+[lun ene 26 22:11:43 CET 2015] [1m[32m[INFO] -----------------> 5[1m[0m
+[lun ene 26 22:52:36 CET 2015] [1m[32m[INFO] Compressing old log files. Executing command: find /home/moro/proyectos/devops/workaround/logs -name workaround.*.log -type f -mtime +1 -exec bzip2 -v {} \;[1m[0m
+[lun ene 26 22:52:36 CET 2015] [1m[32m[INFO] ANY log files compressed[1m[0m
+[lun ene 26 22:52:36 CET 2015] [1m[32m[INFO] Deleting old log files. Executing command: find /home/moro/proyectos/devops/workaround/logs -name workaround.*.log -type f -mtime +365 -exec rm -vf {} \;[1m[0m
+[lun ene 26 22:52:36 CET 2015] [1m[32m[INFO] ANY old log files deleted[1m[0m
+[lun ene 26 22:52:36 CET 2015] [1m[32m[INFO] Looking for pending containers creation[1m[0m
+[lun ene 26 22:52:36 CET 2015] [1m[32m[INFO] Found 0 containers[1m[0m
+[lun ene 26 22:52:36 CET 2015] [1m[32m[INFO] Removing expired containers[1m[0m
+[lun ene 26 22:52:58 CET 2015] [1m[32m[INFO] Compressing old log files. Executing command: find /home/moro/proyectos/devops/workaround/logs -name workaround.*.log -type f -mtime +1 -exec bzip2 -v {} \;[1m[0m
+[lun ene 26 22:52:58 CET 2015] [1m[32m[INFO] Log compression completed. Result was:[1m[0m
+[lun ene 26 22:52:58 CET 2015] [1m[32m[INFO] +++ find /home/moro/proyectos/devops/workaround/logs -name 'workaround.*.log' -type f -mtime +1 -exec bzip2 -v '{}' ';'[1m[0m
+[lun ene 26 22:52:58 CET 2015] [1m[32m[INFO] Deleting old log files. Executing command: find /home/moro/proyectos/devops/workaround/logs -name workaround.*.log -type f -mtime +365 -exec rm -vf {} \;[1m[0m
+[lun ene 26 22:52:58 CET 2015] [1m[32m[INFO] Old log deletion completed. Result was:[1m[0m
+[lun ene 26 22:52:58 CET 2015] [1m[32m[INFO] +++ find /home/moro/proyectos/devops/workaround/logs -name 'workaround.*.log' -type f -mtime +365 -exec rm -vf '{}' ';'[1m[0m
+[lun ene 26 22:52:58 CET 2015] [1m[32m[INFO] Looking for pending containers creation[1m[0m
+[lun ene 26 22:52:58 CET 2015] [1m[32m[INFO] Found 0 containers[1m[0m
+[lun ene 26 22:52:58 CET 2015] [1m[32m[INFO] Removing expired containers[1m[0m
+[lun ene 26 22:53:27 CET 2015] [1m[32m[INFO] Compressing old log files. Executing command: find /home/moro/proyectos/devops/workaround/logs -name workaround.*.log -type f -mtime +1 -exec bzip2 -v {} \;[1m[0m
+[lun ene 26 22:53:27 CET 2015] [1m[32m[INFO] Log compression completed. Result was:[1m[0m
+[lun ene 26 22:53:27 CET 2015] [1m[32m[INFO] +++ find /home/moro/proyectos/devops/workaround/logs -name 'workaround.*.log' -type f -mtime +1 -exec bzip2 -v '{}' ';'[1m[0m
+[lun ene 26 22:53:27 CET 2015] [1m[32m[INFO] Deleting old log files. Executing command: find /home/moro/proyectos/devops/workaround/logs -name workaround.*.log -type f -mtime +365 -exec rm -vf {} \;[1m[0m
+[lun ene 26 22:53:27 CET 2015] [1m[32m[INFO] Old log deletion completed. Result was:[1m[0m
+[lun ene 26 22:53:27 CET 2015] [1m[32m[INFO] +++ find /home/moro/proyectos/devops/workaround/logs -name 'workaround.*.log' -type f -mtime +365 -exec rm -vf '{}' ';'[1m[0m
+[lun ene 26 22:53:27 CET 2015] [1m[32m[INFO] Looking for pending containers creation[1m[0m
+[lun ene 26 22:53:27 CET 2015] [1m[32m[INFO] Found 0 containers[1m[0m
+[lun ene 26 22:53:27 CET 2015] [1m[32m[INFO] Removing expired containers[1m[0m
+[lun ene 26 22:53:27 CET 2015] [1m[32m[INFO] Removing  container id, owner[1m[0m
+[lun ene 26 22:54:20 CET 2015] [1m[32m[INFO] Compressing old log files. Executing command: find /home/moro/proyectos/devops/workaround/logs -name workaround.*.log -type f -mtime +1 -exec bzip2 -v {} \;[1m[0m
+[lun ene 26 22:54:20 CET 2015] [1m[32m[INFO] Log compression completed. Result was:[1m[0m
+[lun ene 26 22:54:20 CET 2015] [1m[32m[INFO] +++ find /home/moro/proyectos/devops/workaround/logs -name 'workaround.*.log' -type f -mtime +1 -exec bzip2 -v '{}' ';'[1m[0m
+[lun ene 26 22:54:20 CET 2015] [1m[32m[INFO] Deleting old log files. Executing command: find /home/moro/proyectos/devops/workaround/logs -name workaround.*.log -type f -mtime +365 -exec rm -vf {} \;[1m[0m
+[lun ene 26 22:54:20 CET 2015] [1m[32m[INFO] Old log deletion completed. Result was:[1m[0m
+[lun ene 26 22:54:20 CET 2015] [1m[32m[INFO] +++ find /home/moro/proyectos/devops/workaround/logs -name 'workaround.*.log' -type f -mtime +365 -exec rm -vf '{}' ';'[1m[0m
+[lun ene 26 22:54:20 CET 2015] [1m[32m[INFO] Looking for pending containers creation[1m[0m
+[lun ene 26 22:54:20 CET 2015] [1m[32m[INFO] Found 0 containers[1m[0m
+[lun ene 26 22:54:20 CET 2015] [1m[32m[INFO] Removing expired containers[1m[0m
+[lun ene 26 22:54:20 CET 2015] [1m[32m[INFO] Removing  container id, owner[1m[0m
+[lun ene 26 22:54:23 CET 2015] [1m[32m[INFO] Compressing old log files. Executing command: find /home/moro/proyectos/devops/workaround/logs -name workaround.*.log -type f -mtime +1 -exec bzip2 -v {} \;[1m[0m
+[lun ene 26 22:54:23 CET 2015] [1m[32m[INFO] Log compression completed. Result was:[1m[0m
+[lun ene 26 22:54:23 CET 2015] [1m[32m[INFO] +++ find /home/moro/proyectos/devops/workaround/logs -name 'workaround.*.log' -type f -mtime +1 -exec bzip2 -v '{}' ';'[1m[0m
+[lun ene 26 22:54:23 CET 2015] [1m[32m[INFO] Deleting old log files. Executing command: find /home/moro/proyectos/devops/workaround/logs -name workaround.*.log -type f -mtime +365 -exec rm -vf {} \;[1m[0m
+[lun ene 26 22:54:23 CET 2015] [1m[32m[INFO] Old log deletion completed. Result was:[1m[0m
+[lun ene 26 22:54:23 CET 2015] [1m[32m[INFO] +++ find /home/moro/proyectos/devops/workaround/logs -name 'workaround.*.log' -type f -mtime +365 -exec rm -vf '{}' ';'[1m[0m
+[lun ene 26 22:54:23 CET 2015] [1m[32m[INFO] Looking for pending containers creation[1m[0m
+[lun ene 26 22:54:23 CET 2015] [1m[32m[INFO] Found 0 containers[1m[0m
+[lun ene 26 22:54:23 CET 2015] [1m[32m[INFO] Removing expired containers[1m[0m
+[lun ene 26 22:54:23 CET 2015] [1m[32m[INFO] Removing  container id, owner[1m[0m
+[lun ene 26 22:56:26 CET 2015] [1m[32m[INFO] Compressing old log files. Executing command: find /home/moro/proyectos/devops/workaround/logs -name workaround.*.log -type f -mtime +1 -exec bzip2 -v {} \;[1m[0m
+[lun ene 26 22:56:26 CET 2015] [1m[32m[INFO] Log compression completed. Result was:[1m[0m
+[lun ene 26 22:56:26 CET 2015] [1m[32m[INFO] +++ find /home/moro/proyectos/devops/workaround/logs -name 'workaround.*.log' -type f -mtime +1 -exec bzip2 -v '{}' ';'[1m[0m
+[lun ene 26 22:56:26 CET 2015] [1m[32m[INFO] Deleting old log files. Executing command: find /home/moro/proyectos/devops/workaround/logs -name workaround.*.log -type f -mtime +365 -exec rm -vf {} \;[1m[0m
+[lun ene 26 22:56:26 CET 2015] [1m[32m[INFO] Old log deletion completed. Result was:[1m[0m
+[lun ene 26 22:56:26 CET 2015] [1m[32m[INFO] +++ find /home/moro/proyectos/devops/workaround/logs -name 'workaround.*.log' -type f -mtime +365 -exec rm -vf '{}' ';'[1m[0m
+[lun ene 26 22:56:26 CET 2015] [1m[32m[INFO] Looking for pending containers creation[1m[0m
+[lun ene 26 22:56:26 CET 2015] [1m[32m[INFO] Found 0 containers[1m[0m
+[lun ene 26 22:56:26 CET 2015] [1m[32m[INFO] Removing expired containers[1m[0m
+[lun ene 26 22:56:26 CET 2015] [1m[32m[INFO] Removing 1 container id, owner[1m[0m
+[lun ene 26 22:56:54 CET 2015] [1m[32m[INFO] Compressing old log files. Executing command: find /home/moro/proyectos/devops/workaround/logs -name workaround.*.log -type f -mtime +1 -exec bzip2 -v {} \;[1m[0m
+[lun ene 26 22:56:54 CET 2015] [1m[32m[INFO] ANY log files compressed[1m[0m
+[lun ene 26 22:56:54 CET 2015] [1m[32m[INFO] Deleting old log files. Executing command: find /home/moro/proyectos/devops/workaround/logs -name workaround.*.log -type f -mtime +365 -exec rm -vf {} \;[1m[0m
+[lun ene 26 22:56:55 CET 2015] [1m[32m[INFO] ANY old log files deleted[1m[0m
+[lun ene 26 22:56:55 CET 2015] [1m[32m[INFO] Looking for pending containers creation[1m[0m
+[lun ene 26 22:56:55 CET 2015] [1m[32m[INFO] Found 0 containers[1m[0m
+[lun ene 26 22:56:55 CET 2015] [1m[32m[INFO] Removing expired containers[1m[0m
+[lun ene 26 22:56:55 CET 2015] [1m[32m[INFO] Removing 1 container id, owner[1m[0m
+[lun ene 26 22:57:07 CET 2015] [1m[32m[INFO] Compressing old log files. Executing command: find /home/moro/proyectos/devops/workaround/logs -name workaround.*.log -type f -mtime +1 -exec bzip2 -v {} \;[1m[0m
+[lun ene 26 22:57:07 CET 2015] [1m[32m[INFO] Log compression completed. Result was:[1m[0m
+[lun ene 26 22:57:07 CET 2015] [1m[32m[INFO] +++ find /home/moro/proyectos/devops/workaround/logs -name 'workaround.*.log' -type f -mtime +1 -exec bzip2 -v '{}' ';'[1m[0m
+[lun ene 26 22:57:07 CET 2015] [1m[32m[INFO] Deleting old log files. Executing command: find /home/moro/proyectos/devops/workaround/logs -name workaround.*.log -type f -mtime +365 -exec rm -vf {} \;[1m[0m
+[lun ene 26 22:57:07 CET 2015] [1m[32m[INFO] Old log deletion completed. Result was:[1m[0m
+[lun ene 26 22:57:07 CET 2015] [1m[32m[INFO] +++ find /home/moro/proyectos/devops/workaround/logs -name 'workaround.*.log' -type f -mtime +365 -exec rm -vf '{}' ';'[1m[0m
+[lun ene 26 22:57:07 CET 2015] [1m[32m[INFO] Looking for pending containers creation[1m[0m
+[lun ene 26 22:57:07 CET 2015] [1m[32m[INFO] Found 0 containers[1m[0m
+[lun ene 26 22:57:07 CET 2015] [1m[32m[INFO] Removing expired containers[1m[0m
+[lun ene 26 22:57:07 CET 2015] [1m[32m[INFO] Removing 1 container id, owner[1m[0m
+[lun ene 26 22:59:12 CET 2015] [1m[32m[INFO] Compressing old log files. Executing command: find /home/moro/proyectos/devops/workaround/logs -name workaround.*.log -type f -mtime +1 -exec bzip2 -v {} \;[1m[0m
+[lun ene 26 22:59:12 CET 2015] [1m[32m[INFO] Log compression completed. Result was:[1m[0m
+[lun ene 26 22:59:12 CET 2015] [1m[32m[INFO] +++ find /home/moro/proyectos/devops/workaround/logs -name 'workaround.*.log' -type f -mtime +1 -exec bzip2 -v '{}' ';'[1m[0m
+[lun ene 26 22:59:12 CET 2015] [1m[32m[INFO] Deleting old log files. Executing command: find /home/moro/proyectos/devops/workaround/logs -name workaround.*.log -type f -mtime +365 -exec rm -vf {} \;[1m[0m
+[lun ene 26 22:59:12 CET 2015] [1m[32m[INFO] Old log deletion completed. Result was:[1m[0m
+[lun ene 26 22:59:12 CET 2015] [1m[32m[INFO] +++ find /home/moro/proyectos/devops/workaround/logs -name 'workaround.*.log' -type f -mtime +365 -exec rm -vf '{}' ';'[1m[0m
+[lun ene 26 22:59:12 CET 2015] [1m[32m[INFO] Looking for pending containers creation[1m[0m
+[lun ene 26 22:59:12 CET 2015] [1m[32m[INFO] Found 0 containers[1m[0m
+[lun ene 26 22:59:12 CET 2015] [1m[32m[INFO] Removing expired containers[1m[0m
+[lun ene 26 22:59:12 CET 2015] [1m[32m[INFO] Removing 1 container id, owner[1m[0m
+[lun ene 26 23:01:03 CET 2015] [1m[32m[INFO] Compressing old log files. Executing command: find /home/moro/proyectos/devops/workaround/logs -name workaround.*.log -type f -mtime +1 -exec bzip2 -v {} \;[1m[0m
+[lun ene 26 23:01:03 CET 2015] [1m[32m[INFO] Log compression completed. Result was:[1m[0m
+[lun ene 26 23:01:03 CET 2015] [1m[32m[INFO] +++ find /home/moro/proyectos/devops/workaround/logs -name 'workaround.*.log' -type f -mtime +1 -exec bzip2 -v '{}' ';'[1m[0m
+[lun ene 26 23:01:03 CET 2015] [1m[32m[INFO] Deleting old log files. Executing command: find /home/moro/proyectos/devops/workaround/logs -name workaround.*.log -type f -mtime +365 -exec rm -vf {} \;[1m[0m
+[lun ene 26 23:01:03 CET 2015] [1m[32m[INFO] Old log deletion completed. Result was:[1m[0m
+[lun ene 26 23:01:03 CET 2015] [1m[32m[INFO] +++ find /home/moro/proyectos/devops/workaround/logs -name 'workaround.*.log' -type f -mtime +365 -exec rm -vf '{}' ';'[1m[0m
+[lun ene 26 23:01:03 CET 2015] [1m[32m[INFO] Looking for pending containers creation[1m[0m
+[lun ene 26 23:01:03 CET 2015] [1m[32m[INFO] Found 0 containers[1m[0m
+[lun ene 26 23:01:03 CET 2015] [1m[32m[INFO] Removing expired containers[1m[0m
+[lun ene 26 23:01:03 CET 2015] [1m[32m[INFO] Removing 1 container id, owner[1m[0m
+[lun ene 26 23:02:00 CET 2015] [1m[32m[INFO] Compressing old log files. Executing command: find /home/moro/proyectos/devops/workaround/logs -name workaround.*.log -type f -mtime +1 -exec bzip2 -v {} \;[1m[0m
+[lun ene 26 23:02:00 CET 2015] [1m[32m[INFO] Log compression completed. Result was:[1m[0m
+[lun ene 26 23:02:00 CET 2015] [1m[32m[INFO] +++ find /home/moro/proyectos/devops/workaround/logs -name 'workaround.*.log' -type f -mtime +1 -exec bzip2 -v '{}' ';'[1m[0m
+[lun ene 26 23:02:00 CET 2015] [1m[32m[INFO] Deleting old log files. Executing command: find /home/moro/proyectos/devops/workaround/logs -name workaround.*.log -type f -mtime +365 -exec rm -vf {} \;[1m[0m
+[lun ene 26 23:02:00 CET 2015] [1m[32m[INFO] Old log deletion completed. Result was:[1m[0m
+[lun ene 26 23:02:00 CET 2015] [1m[32m[INFO] +++ find /home/moro/proyectos/devops/workaround/logs -name 'workaround.*.log' -type f -mtime +365 -exec rm -vf '{}' ';'[1m[0m
+[lun ene 26 23:02:00 CET 2015] [1m[32m[INFO] Looking for pending containers creation[1m[0m
+[lun ene 26 23:02:00 CET 2015] [1m[32m[INFO] Found 0 containers[1m[0m
+[lun ene 26 23:02:00 CET 2015] [1m[32m[INFO] Removing expired containers[1m[0m
+[lun ene 26 23:02:00 CET 2015] [1m[32m[INFO] Removing 2	contenedor01 container id, owner[1m[0m
+[lun ene 26 23:02:28 CET 2015] [1m[32m[INFO] Compressing old log files. Executing command: find /home/moro/proyectos/devops/workaround/logs -name workaround.*.log -type f -mtime +1 -exec bzip2 -v {} \;[1m[0m
+[lun ene 26 23:02:28 CET 2015] [1m[32m[INFO] Log compression completed. Result was:[1m[0m
+[lun ene 26 23:02:28 CET 2015] [1m[32m[INFO] +++ find /home/moro/proyectos/devops/workaround/logs -name 'workaround.*.log' -type f -mtime +1 -exec bzip2 -v '{}' ';'[1m[0m
+[lun ene 26 23:02:28 CET 2015] [1m[32m[INFO] Deleting old log files. Executing command: find /home/moro/proyectos/devops/workaround/logs -name workaround.*.log -type f -mtime +365 -exec rm -vf {} \;[1m[0m
+[lun ene 26 23:02:28 CET 2015] [1m[32m[INFO] Old log deletion completed. Result was:[1m[0m
+[lun ene 26 23:02:28 CET 2015] [1m[32m[INFO] +++ find /home/moro/proyectos/devops/workaround/logs -name 'workaround.*.log' -type f -mtime +365 -exec rm -vf '{}' ';'[1m[0m
+[lun ene 26 23:02:28 CET 2015] [1m[32m[INFO] Looking for pending containers creation[1m[0m
+[lun ene 26 23:02:28 CET 2015] [1m[32m[INFO] Found 0 containers[1m[0m
+[lun ene 26 23:02:28 CET 2015] [1m[32m[INFO] Removing expired containers[1m[0m
+[lun ene 26 23:02:28 CET 2015] [1m[32m[INFO] Removing 2 container id, owner contenedor01[1m[0m
+[lun ene 26 23:03:10 CET 2015] [1m[32m[INFO] Compressing old log files. Executing command: find /home/moro/proyectos/devops/workaround/logs -name workaround.*.log -type f -mtime +1 -exec bzip2 -v {} \;[1m[0m
+[lun ene 26 23:03:10 CET 2015] [1m[32m[INFO] ANY log files compressed[1m[0m
+[lun ene 26 23:03:10 CET 2015] [1m[32m[INFO] Deleting old log files. Executing command: find /home/moro/proyectos/devops/workaround/logs -name workaround.*.log -type f -mtime +365 -exec rm -vf {} \;[1m[0m
+[lun ene 26 23:03:10 CET 2015] [1m[32m[INFO] ANY old log files deleted[1m[0m
+[lun ene 26 23:03:10 CET 2015] [1m[32m[INFO] Looking for pending containers creation[1m[0m
+[lun ene 26 23:03:10 CET 2015] [1m[32m[INFO] Found 3 containers to be processed: Starting[1m[0m
+[lun ene 26 23:03:10 CET 2015] [1m[32m[INFO] Pending container "1" generation started[1m[0m
+[lun ene 26 23:03:10 CET 2015] [1m[32m[INFO] Step 1: Create Storage[1m[0m
+[lun ene 26 23:03:10 CET 2015] [1m[31m[ERROR] Something was wrong with storage generation[1m[0m
+[lun ene 26 23:03:10 CET 2015] [1m[31m[ERROR] Storage generation FAILED[1m[0m
+[lun ene 26 23:04:15 CET 2015] [1m[32m[INFO] Compressing old log files. Executing command: find /home/moro/proyectos/devops/workaround/logs -name workaround.*.log -type f -mtime +1 -exec bzip2 -v {} \;[1m[0m
+[lun ene 26 23:04:15 CET 2015] [1m[32m[INFO] ANY log files compressed[1m[0m
+[lun ene 26 23:04:15 CET 2015] [1m[32m[INFO] Deleting old log files. Executing command: find /home/moro/proyectos/devops/workaround/logs -name workaround.*.log -type f -mtime +365 -exec rm -vf {} \;[1m[0m
+[lun ene 26 23:04:15 CET 2015] [1m[32m[INFO] ANY old log files deleted[1m[0m
+[lun ene 26 23:04:15 CET 2015] [1m[32m[INFO] Looking for pending containers creation[1m[0m
+[lun ene 26 23:04:15 CET 2015] [1m[32m[INFO] Found 3 containers to be processed: Starting[1m[0m
+[lun ene 26 23:04:15 CET 2015] [1m[32m[INFO] Pending container "1" generation started[1m[0m
+[lun ene 26 23:04:15 CET 2015] [1m[32m[INFO] Step 1: Create Storage[1m[0m
+[lun ene 26 23:04:18 CET 2015] [1m[32m[INFO] Storage contenedor1 generated[1m[0m
+[lun ene 26 23:04:18 CET 2015] [1m[32m[INFO] Step 2: Container Installation[1m[0m
+[lun ene 26 23:04:21 CET 2015] [1m[32m[INFO] Determine new IP Address[1m[0m
+[lun ene 26 23:04:21 CET 2015] [1m[32m[INFO] Setting Password[1m[0m
+[] [1m[31m[ERROR] Failed setting password[1m[0m
+[lun ene 26 23:04:21 CET 2015] [1m[32m[INFO] Pending container "2" generation started[1m[0m
+[lun ene 26 23:04:21 CET 2015] [1m[32m[INFO] Step 1: Create Storage[1m[0m
+[lun ene 26 23:04:23 CET 2015] [1m[32m[INFO] Storage contenedor2 generated[1m[0m
+[lun ene 26 23:04:23 CET 2015] [1m[32m[INFO] Step 2: Container Installation[1m[0m
+[lun ene 26 23:04:33 CET 2015] [1m[32m[INFO] Determine new IP Address[1m[0m
+[lun ene 26 23:04:33 CET 2015] [1m[32m[INFO] Setting Password[1m[0m
+[] [1m[31m[ERROR] Failed setting password[1m[0m
+[lun ene 26 23:04:33 CET 2015] [1m[32m[INFO] Pending container "3" generation started[1m[0m
+[lun ene 26 23:04:33 CET 2015] [1m[32m[INFO] Step 1: Create Storage[1m[0m
+[lun ene 26 23:04:38 CET 2015] [1m[32m[INFO] Storage contenedor3 generated[1m[0m
+[lun ene 26 23:04:38 CET 2015] [1m[32m[INFO] Step 2: Container Installation[1m[0m
+[lun ene 26 23:04:45 CET 2015] [1m[32m[INFO] Determine new IP Address[1m[0m
+[lun ene 26 23:04:45 CET 2015] [1m[32m[INFO] Setting Password[1m[0m
+[] [1m[31m[ERROR] Failed setting password[1m[0m
+[lun ene 26 23:04:45 CET 2015] [1m[32m[INFO] Removing expired containers[1m[0m
+[lun ene 26 23:04:45 CET 2015] [1m[32m[INFO] Removing 2[1m[0m
+[lun ene 26 23:04:45 CET 2015] [1m[32m[INFO] 3[1m[0m
+[lun ene 26 23:04:45 CET 2015] [1m[32m[INFO] 4[1m[0m
+[lun ene 26 23:04:45 CET 2015] [1m[32m[INFO] 5 container id, owner contenedor01[1m[0m
+[lun ene 26 23:04:45 CET 2015] [1m[32m[INFO] contenedor1[1m[0m
+[lun ene 26 23:04:45 CET 2015] [1m[32m[INFO] contenedor2[1m[0m
+[lun ene 26 23:04:45 CET 2015] [1m[32m[INFO] contenedor3[1m[0m
+[lun ene 26 23:15:12 CET 2015] [1m[32m[INFO] Compressing old log files. Executing command: find /home/moro/proyectos/devops/workaround/logs -name workaround.*.log -type f -mtime +1 -exec bzip2 -v {} \;[1m[0m
+[lun ene 26 23:15:12 CET 2015] [1m[32m[INFO] Log compression completed. Result was:[1m[0m
+[lun ene 26 23:15:12 CET 2015] [1m[32m[INFO] +++ find /home/moro/proyectos/devops/workaround/logs -name 'workaround.*.log' -type f -mtime +1 -exec bzip2 -v '{}' ';'[1m[0m
+[lun ene 26 23:15:12 CET 2015] [1m[32m[INFO] Deleting old log files. Executing command: find /home/moro/proyectos/devops/workaround/logs -name workaround.*.log -type f -mtime +365 -exec rm -vf {} \;[1m[0m
+[lun ene 26 23:15:12 CET 2015] [1m[32m[INFO] Old log deletion completed. Result was:[1m[0m
+[lun ene 26 23:15:12 CET 2015] [1m[32m[INFO] +++ find /home/moro/proyectos/devops/workaround/logs -name 'workaround.*.log' -type f -mtime +365 -exec rm -vf '{}' ';'[1m[0m
+[lun ene 26 23:15:12 CET 2015] [1m[32m[INFO] Looking for pending containers creation[1m[0m
+[lun ene 26 23:15:12 CET 2015] [1m[32m[INFO] Found 0 containers[1m[0m
+[lun ene 26 23:15:12 CET 2015] [1m[32m[INFO] Removing expired containers[1m[0m
+[lun ene 26 23:15:12 CET 2015] [1m[32m[INFO] Removing 2[1m[0m
+[lun ene 26 23:15:12 CET 2015] [1m[32m[INFO] 3[1m[0m
+[lun ene 26 23:15:12 CET 2015] [1m[32m[INFO] 4[1m[0m
+[lun ene 26 23:15:12 CET 2015] [1m[32m[INFO] 5 container id, owner contenedor01[1m[0m
+[lun ene 26 23:15:12 CET 2015] [1m[32m[INFO] contenedor1[1m[0m
+[lun ene 26 23:15:12 CET 2015] [1m[32m[INFO] contenedor2[1m[0m
+[lun ene 26 23:15:12 CET 2015] [1m[32m[INFO] contenedor3[1m[0m
+[lun ene 26 23:25:38 CET 2015] [1m[32m[INFO] Compressing old log files. Executing command: find /home/moro/proyectos/devops/workaround/logs -name workaround.*.log -type f -mtime +1 -exec bzip2 -v {} \;[1m[0m
+[lun ene 26 23:25:38 CET 2015] [1m[32m[INFO] ANY log files compressed[1m[0m
+[lun ene 26 23:25:38 CET 2015] [1m[32m[INFO] Deleting old log files. Executing command: find /home/moro/proyectos/devops/workaround/logs -name workaround.*.log -type f -mtime +365 -exec rm -vf {} \;[1m[0m
+[lun ene 26 23:25:38 CET 2015] [1m[32m[INFO] ANY old log files deleted[1m[0m
+[lun ene 26 23:25:38 CET 2015] [1m[32m[INFO] Looking for pending containers creation[1m[0m
+[lun ene 26 23:25:38 CET 2015] [1m[32m[INFO] Found 3 containers to be processed: Starting[1m[0m
+[lun ene 26 23:25:38 CET 2015] [1m[32m[INFO] Pending container "1" generation started[1m[0m
+[lun ene 26 23:25:38 CET 2015] [1m[32m[INFO] Step 1: Create Storage[1m[0m
+[lun ene 26 23:25:41 CET 2015] [1m[32m[INFO] Storage contenedor1 generated[1m[0m
+[lun ene 26 23:25:41 CET 2015] [1m[32m[INFO] Step 2: Container Installation[1m[0m
+[lun ene 26 23:25:44 CET 2015] [1m[32m[INFO] Determine new IP Address[1m[0m
+[lun ene 26 23:25:44 CET 2015] [1m[32m[INFO] Setting Password[1m[0m
+[] [1m[31m[ERROR] Failed setting password[1m[0m
+[lun ene 26 23:25:44 CET 2015] [1m[32m[INFO] Pending container "2" generation started[1m[0m
+[lun ene 26 23:25:44 CET 2015] [1m[32m[INFO] Step 1: Create Storage[1m[0m
+[lun ene 26 23:25:47 CET 2015] [1m[32m[INFO] Storage contenedor2 generated[1m[0m
+[lun ene 26 23:25:47 CET 2015] [1m[32m[INFO] Step 2: Container Installation[1m[0m
+[lun ene 26 23:25:53 CET 2015] [1m[32m[INFO] Determine new IP Address[1m[0m
+[lun ene 26 23:25:53 CET 2015] [1m[32m[INFO] Setting Password[1m[0m
+[] [1m[31m[ERROR] Failed setting password[1m[0m
+[lun ene 26 23:25:54 CET 2015] [1m[32m[INFO] Pending container "3" generation started[1m[0m
+[lun ene 26 23:25:54 CET 2015] [1m[32m[INFO] Step 1: Create Storage[1m[0m
+[lun ene 26 23:25:58 CET 2015] [1m[32m[INFO] Storage contenedor3 generated[1m[0m
+[lun ene 26 23:25:58 CET 2015] [1m[32m[INFO] Step 2: Container Installation[1m[0m
+[lun ene 26 23:26:05 CET 2015] [1m[32m[INFO] Determine new IP Address[1m[0m
+[lun ene 26 23:26:05 CET 2015] [1m[32m[INFO] Setting Password[1m[0m
+[] [1m[31m[ERROR] Failed setting password[1m[0m
+[lun ene 26 23:26:06 CET 2015] [1m[32m[INFO] Removing expired containers[1m[0m
+[lun ene 26 23:26:06 CET 2015] [1m[32m[INFO] Removing 2 container id, owner contenedor01[1m[0m
+[lun ene 26 23:26:06 CET 2015] [1m[32m[INFO] Removing 2 container id, owner contenedor1[1m[0m
+[lun ene 26 23:26:07 CET 2015] [1m[31m[ERROR] Something was wrong while lvremove[1m[0m
+[lun ene 26 23:26:07 CET 2015] [1m[32m[INFO] Removed //var/lib/lxc\/contenedor1 line from /etc/fstab file[1m[0m
+[lun ene 26 23:26:07 CET 2015] [1m[32m[INFO] Removing /var/lib/lxc/contenedor1 with rm -fr[1m[0m
+[lun ene 26 23:26:07 CET 2015] [1m[32m[INFO] Removing 2 container id, owner contenedor2[1m[0m
+[lun ene 26 23:26:09 CET 2015] [1m[31m[ERROR] Something was wrong while lvremove[1m[0m
+[lun ene 26 23:26:09 CET 2015] [1m[32m[INFO] Removed //var/lib/lxc\/contenedor2 line from /etc/fstab file[1m[0m
+[lun ene 26 23:26:09 CET 2015] [1m[32m[INFO] Removing /var/lib/lxc/contenedor2 with rm -fr[1m[0m
+[lun ene 26 23:26:09 CET 2015] [1m[32m[INFO] Removing 2 container id, owner contenedor3[1m[0m
+[lun ene 26 23:26:12 CET 2015] [1m[31m[ERROR] Something was wrong while lvremove[1m[0m
+[lun ene 26 23:26:12 CET 2015] [1m[32m[INFO] Removed //var/lib/lxc\/contenedor3 line from /etc/fstab file[1m[0m
+[lun ene 26 23:26:12 CET 2015] [1m[32m[INFO] Removing /var/lib/lxc/contenedor3 with rm -fr[1m[0m
+[lun ene 26 23:26:12 CET 2015] [1m[32m[INFO] Removing 3 container id, owner contenedor01[1m[0m
+[lun ene 26 23:26:12 CET 2015] [1m[32m[INFO] Removing 3 container id, owner contenedor1[1m[0m
+[lun ene 26 23:26:12 CET 2015] [1m[32m[INFO] Removing 3 container id, owner contenedor2[1m[0m
+[lun ene 26 23:26:12 CET 2015] [1m[32m[INFO] Removing 3 container id, owner contenedor3[1m[0m
+[lun ene 26 23:26:12 CET 2015] [1m[32m[INFO] Removing 4 container id, owner contenedor01[1m[0m
+[lun ene 26 23:26:12 CET 2015] [1m[32m[INFO] Removing 4 container id, owner contenedor1[1m[0m
+[lun ene 26 23:26:12 CET 2015] [1m[32m[INFO] Removing 4 container id, owner contenedor2[1m[0m
+[lun ene 26 23:26:12 CET 2015] [1m[32m[INFO] Removing 4 container id, owner contenedor3[1m[0m
+[lun ene 26 23:26:12 CET 2015] [1m[32m[INFO] Removing 5 container id, owner contenedor01[1m[0m
+[lun ene 26 23:26:12 CET 2015] [1m[32m[INFO] Removing 5 container id, owner contenedor1[1m[0m
+[lun ene 26 23:26:12 CET 2015] [1m[32m[INFO] Removing 5 container id, owner contenedor2[1m[0m
+[lun ene 26 23:26:12 CET 2015] [1m[32m[INFO] Removing 5 container id, owner contenedor3[1m[0m
