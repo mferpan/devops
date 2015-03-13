@@ -35,7 +35,7 @@ function createReport () {
 	sed -i -e "1d" $REPORT_TEMP_DIR/$REPORT_TEMP
 
 	echo "<tbody>" >> $REPORT_DIR/$REPORT_NAGIOS
-	head -n$((NL-1)) $REPORT_TEMP_DIR/$REPORT_TEMP | sed 's/<TR>/<thead><tr>/g' | sed 's/<TH>/<td>/g' >> $REPORT_DIR/$REPORT_NAGIOS
+	head -n$((NL-2)) $REPORT_TEMP_DIR/$REPORT_TEMP | sed 's/<TR>/<thead><tr>/g' | sed 's/<TH>/<td>/g' >> $REPORT_DIR/$REPORT_NAGIOS
 	echo "</tbody>" >> $REPORT_DIR/$REPORT_NAGIOS
 
 	tail -n1 $REPORT_TEMP_DIR/$REPORT_TEMP | sed 's/<tr>/<tfoot><tr>/g' | sed 's/<\/tr>/<\/tr><\/tfoot>/g' >> $REPORT_DIR/$REPORT_NAGIOS
