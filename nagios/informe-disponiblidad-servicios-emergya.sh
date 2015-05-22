@@ -2,7 +2,7 @@
 
 # VARS
 USER="mpanzuela"
-PASS="Direla2012"
+PASS="XXXX"
 DATE=`date +%Y%m%d-%H%M%S`
 REPORT="Emergya-report-$DATE"
 REPORT_NAGIOS="Emergya-nagios-report.html"
