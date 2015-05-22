@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # VARS
-USER="mpanzuela"
+USER="XXXX"
 PASS="XXXX"
 DATE=`date +%Y%m%d-%H%M%S`
 REPORT="Emergya-report-$DATE"
