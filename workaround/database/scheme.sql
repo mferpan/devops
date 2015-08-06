@@ -115,7 +115,6 @@ INSERT INTO lxc_templates (name) VALUES ("busybox");
 INSERT INTO lxc_templates (name) VALUES ("centos");
 INSERT INTO lxc_templates (name) VALUES ("cirros");
 INSERT INTO lxc_templates (name) VALUES ("debian");
-INSERT INTO lxc_templates (name) VALUES ("download");
 INSERT INTO lxc_templates (name) VALUES ("fedora");
 INSERT INTO lxc_templates (name) VALUES ("gentoo");
 INSERT INTO lxc_templates (name) VALUES ("openmandriva");
@@ -124,5 +123,3 @@ INSERT INTO lxc_templates (name) VALUES ("oracle");
 INSERT INTO lxc_templates (name) VALUES ("plamo");
 INSERT INTO lxc_templates (name) VALUES ("sshd");
 INSERT INTO lxc_templates (name) VALUES ("ubuntu");
-INSERT INTO lxc_templates (name) VALUES ("ubuntu");
-
