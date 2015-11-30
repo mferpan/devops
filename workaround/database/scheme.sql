@@ -18,7 +18,8 @@ CREATE TABLE users (
   KEY (id)
 ) ENGINE=InnoDB;
 
-INSERT INTO users (email,password,name,surname,address,city,province,postcode,country) VALUES ("manuel@mfernandez.es","04d968d0b9e4b0ca9f6d557a3b3a57f7","manuel","fernandez panzuela","mi casa en dos hermanas","sevilla","andalucia",41700,"España");
+INSERT INTO users (email,password,name,surname,address,city,province,postcode,country) VALUES ("manuel@backendaas.com","04d968d0b9e4b0ca9f6d557a3b3a57f7","manuel","fernandez panzuela","mi casa en dos hermanas","sevilla","andalucia",41700,"España");
+INSERT INTO users (email,password,name,surname,address,city,province,postcode,country) VALUES ("javier@backendaas.com","04d968d0b9e4b0ca9f6d557a3b3a57f7","manuel","fernandez panzuela","mi casa en dos hermanas","sevilla","andalucia",41700,"España");
 
 
 /*
