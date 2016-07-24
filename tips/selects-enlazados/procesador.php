@@ -1,24 +1,24 @@
 <?php
 session_start();
-$selectDestino=$_GET["select"];
-$opcionSeleccionada=$_GET["opcion"];
+$selectDest=$_GET["select"];
+$optSelected=$_GET["opcion"];
 
-if ($selectDestino == "select2") {
-   $_SESSION["select1"] = $opcionSeleccionada;
+if ($selectDest == "select2") {
+   $_SESSION["select1"] = $optSelected;
 }
 
 $a_data = array();
 if (($handle = fopen("combos.csv", "r")) !== FALSE) {
-   echo "<select name='".$selectDestino."' id='".$selectDestino."' onChange='cargaContenido(this.id)'>";
+   echo "<select name='".$selectDest."' id='".$selectDest."' onChange='cargaContenido(this.id)'>";
    echo "<option value='0'>Select an option...</option>";
 
    while (($data = fgetcsv($handle, 1000, ";")) !== FALSE) {
-      if ($selectDestino=="select3"){
-         if ($opcionSeleccionada==$data[2] && $_SESSION['select1']==$data[0] ){
+      if ($selectDest=="select3"){
+         if ($optSelected==$data[2] && $_SESSION['select1']==$data[0] ){
             $a_data[]=$data[1];
          }
       } else {
-         if ($opcionSeleccionada==$data[0]){
+         if ($optSelected==$data[0]){
             $a_data[]=$data[2];
          }
       }
