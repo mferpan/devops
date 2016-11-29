@@ -10,7 +10,7 @@
 
 5. Edit /opt/backupHealth/bin/backupHealth.sh file and set these two variables:
 	REPORT_MAIL_ADDRESS="manuel@mfernandez.es"
-	SENDER="backup-verifier@grupoinova.es"
+	SENDER="backup-verifier@mfernandez.es"
 
 6. Set the program as a task. Execute this command as root
 
