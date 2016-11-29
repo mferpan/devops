@@ -1,0 +1,10 @@
+#!/bin/bash
+MAIL=$1
+
+filepath="/opt/backupHealth/inbox/$(date +%s%N).eml"
+touch $filepath
+chown panzuela $filepath
+while read line
+do
+  echo "$line" >> $filepath
+done < "${1:-/proc/${$}/fd/0}"

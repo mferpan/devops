@@ -1,0 +1,19 @@
+1. Dependencies
+	- fetchmail
+	- mutt
+
+2. Decompress into /opt directory
+
+3. Create clients executing /opt/backupHealth/bin/backupHealth.sh and following instructions
+
+4. Configure an email account in /opt/backupHealth/config/fetchmailrc file (GMAIL is the best option in order to get a free and big email account)
+
+5. Edit /opt/backupHealth/bin/backupHealth.sh file and set these two variables:
+	REPORT_MAIL_ADDRESS="manuel@mfernandez.es"
+	SENDER="backup-verifier@grupoinova.es"
+
+6. Set the program as a task. Execute this command as root
+
+echo "# Cron exaple for an executions everyday at 09:00 AM" >> /etc/crontab
+echo "00  9  *  *  * root /opt/backupHealth/bin/backupHealth.sh auto" >> /etc/crontab
+
