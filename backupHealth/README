@@ -12,7 +12,22 @@
 	REPORT_MAIL_ADDRESS="manuel@mfernandez.es"
 	SENDER="backup-verifier@mfernandez.es"
 
-6. Set the program as a task. Execute this command as root
+6. Final Tree
+     /opt/backupHealth
+     ├── archived
+     ├── bin
+     │   ├── backupHealth.sh
+     │   └── fetchmailhandler
+     ├── clients
+     │   ├── CLIENT1
+     │   └── vzdump
+     ├── config
+     │   └── fetchmailrc
+     ├── inbox
+     ├── logs
+     └── README
+
+7. Set the program as a task. Execute this command as root
 
 echo "# Cron exaple for an executions everyday at 09:00 AM" >> /etc/crontab
 echo "00  9  *  *  * root /opt/backupHealth/bin/backupHealth.sh auto" >> /etc/crontab
