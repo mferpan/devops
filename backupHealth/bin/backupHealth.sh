@@ -18,7 +18,7 @@ SENDER="backup-verifier@grupoinova.es"
 
 TOTAL_CLIENTS=$(ls ${CLIENTS_BASE} | wc -l)
 
-# ToDo
+# To Do
 # Verify that each company has backup emails
 
 # -------- Functions --------
@@ -28,7 +28,6 @@ downloadEmail() {
 	[ ! -f ${LOG} ] && touch ${LOG}
 	${FM_CMD} --fetchmailrc ${CONF_DIR}/fetchmailrc --logfile ${LOG}
 }
-
 
 sendReport() {
 	local OK=$1
@@ -60,7 +59,6 @@ sendReport() {
 	echo "${BODY}" | mutt -e "set realname=\"${SENDER}\"" -e "set content_type=text/html" -s "${SUBJECT}" "${REPORT_MAIL_ADDRESS}"
 }
 
-
 parseEmail() {
 	local CLIENTS=$(ls ${CLIENTS_BASE})
 	local CLIENTS_OK=""
@@ -75,8 +73,13 @@ parseEmail() {
 			# Checking Proxmox backups
 			if (grep "vzdump.*successful" ${INBOX}/${MAIL}); then
 				mv ${INBOX}/${MAIL} ${VZ_FOLDER}
+			elif (grep "vzdump.*error" ${INBOX}/${MAIL}); then
+				mv ${INBOX}/${MAIL} ${VZ_FOLDER}
+			elif (grep "vzdump.*warning" ${INBOX}/${MAIL}); then
+				mv ${INBOX}/${MAIL} ${VZ_FOLDER}
 			fi
 
+			# Checking other emails
 			if (grep "Subject.*correctamente.*${CLI}" ${INBOX}/${MAIL}); then
 				mv ${INBOX}/${MAIL} ${CLIENTS_BASE}/${CLI}
 				CLIENTS_OK+=" ${CLI}"
@@ -98,7 +101,6 @@ parseEmail() {
 	sendReport "${CLIENTS_OK}" "${CLIENTS_WR}" "${CLIENTS_ER}"
 }
 
-
 compressEmails(){
 	local D=$(date +%Y%m -d 'last month')
 
@@ -115,11 +117,13 @@ compressEmails(){
 	done
 }
 
-
 cleanLogs() {
 	find ${LOGS_DIR} -mtime +31 -type f -delete
 }
 
+cleanArchived() {
+	find ${ARCHIVED} -mtime +31 -type f -delete
+}
 
 listClients() {
 	local CLIENT
@@ -145,6 +149,7 @@ download() {
 	downloadEmail
 	parseEmail
 	cleanLogs
+	cleanArchived
 	[ $(date +%e) -eq ${COMPRESS_DAY} ] && compressEmails
 	echo "[FINISH]"
 }
