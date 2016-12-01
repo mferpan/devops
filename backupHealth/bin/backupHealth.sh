@@ -25,6 +25,7 @@ TOTAL_CLIENTS=$(ls ${CLIENTS_BASE} | wc -l)
 downloadEmail() {
 	local LOG="${LOGS_DIR}/fetchmailrc-${DATE}.log"
 
+	[ ! -d ${INBOX} ] && mkdir -p ${INBOX}
 	[ ! -f ${LOG} ] && touch ${LOG}
 	${FM_CMD} --fetchmailrc ${CONF_DIR}/fetchmailrc --logfile ${LOG}
 }
