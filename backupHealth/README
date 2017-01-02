@@ -4,9 +4,10 @@
 
 2. Decompress into /opt directory
 
-3. Create clients executing /opt/backupHealth/bin/backupHealth.sh and following instructions
+3. Create backup clients: /opt/backupHealth/bin/backupHealth.sh and following instructions
 
-4. Configure an email account in /opt/backupHealth/config/fetchmailrc file (GMAIL is the best option in order to get a free and big email account)
+4. Configure an email account: /opt/backupHealth/config/fetchmailrc
+	(in my opinion GMAIL is the best option - free and big email account)
 
 5. Edit /opt/backupHealth/bin/backupHealth.sh file and set these two variables:
 	REPORT_MAIL_ADDRESS="manuel@mfernandez.es"
@@ -27,8 +28,8 @@
      ├── logs
      └── README
 
-7. Set the program as a task. Execute this command as root
+7. Set the program as a cron task. Choose your user.
 
-echo "# Cron exaple for an executions everyday at 09:00 AM" >> /etc/crontab
+echo "# Cron example for everyday executions at 09:00 AM" >> /etc/crontab
 echo "00  9  *  *  * root /opt/backupHealth/bin/backupHealth.sh auto" >> /etc/crontab
 
