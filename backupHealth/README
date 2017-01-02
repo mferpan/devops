@@ -15,9 +15,11 @@
 
 6. Final Tree
      /opt/backupHealth
+     ├── app
+     │   └── functions
      ├── archived
      ├── bin
-     │   ├── backupHealth.sh
+     │   ├── backupHealth
      │   └── fetchmailhandler
      ├── clients
      │   ├── CLIENT1
@@ -31,5 +33,5 @@
 7. Set the program as a cron task. Choose your user.
 
 echo "# Cron example for everyday executions at 09:00 AM" >> /etc/crontab
-echo "00  9  *  *  * root /opt/backupHealth/bin/backupHealth.sh auto" >> /etc/crontab
+echo "00  9  *  *  * root /opt/backupHealth/bin/backupHealth auto" >> /etc/crontab
 

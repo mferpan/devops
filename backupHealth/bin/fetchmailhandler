@@ -1,9 +1,10 @@
 #!/bin/bash
 MAIL=$1
-
+OWNER="panzuela"
 filepath="/opt/backupHealth/inbox/$(date +%s%N).eml"
+
 touch $filepath
-chown panzuela $filepath
+chown $OWNER $filepath
 while read line
 do
   echo "$line" >> $filepath
