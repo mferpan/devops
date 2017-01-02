@@ -1,0 +1,28 @@
+#!/bin/bash
+
+# -------- Vars --------
+BASE="/opt/backupHealth"
+CONF_DIR="${BASE}/config"
+CLIENTS_BASE="${BASE}/clients"
+ARCHIVED="${BASE}/archived"
+VZ_FOLDER="${CLIENTS_BASE}/vzdump"
+LOGS_DIR="${BASE}/logs"
+INBOX="${BASE}/inbox"
+FM_CMD="/usr/bin/fetchmail"
+
+DATE=$(date +%Y%m%d)
+LOG="${LOGS_DIR}/fetchmailrc-${DATE}.log"
+COMPRESS_DAY="1"
+
+REPORT_MAIL_ADDRESS="glpi@inovages.es"
+SENDER="backup@grupoinova.es"
+
+TOTAL_CLIENTS=$(ls ${CLIENTS_BASE} | wc -l)
+APP="${BASE}/app"
+
+# -------- Functions --------
+. ${APP}/functions
+
+
+# -------- MAIN --------
+[ "$1" = "auto" ] && download  || menu
