@@ -11,6 +11,7 @@ sendReport() {
     local OK=($(echo "$1" | tr ' ' '\n' | sort -u | tr '\n' ' '))
     local WR=($(echo "$2" | tr ' ' '\n' | sort -u | tr '\n' ' '))
     local ER=($(echo "$3" | tr ' ' '\n' | sort -u | tr '\n' ' '))
+    local NP=($(echo "$4" | tr ' ' '\n' | sort -u | tr '\n' ' '))
     local BODY="Backup report generated at $(date +%Y/%m/%d-%H:%M:%S) <br /><br /><br />"
 
 	if [ ! -z "$OK" ]; then
@@ -27,6 +28,13 @@ sendReport() {
 		BODY+="</font><br />"
 	fi
 
+        if [ ! -z "$NP" ]; then
+                SUBJECT="[ERROR] There are ${#NP[@]} clients without backup report"
+                BODY+="There are ${#ER[@]} clients without backup report in <font color=\"red\">ERROR</font> state: <br /><font color=\"red\">"
+                for host in ${NP[*]}; do BODY+=" > ${host}<br />"; done
+                BODY+="</font><br />"
+        fi
+
 	if [ ! -z "$ER" ]; then
 		SUBJECT="[ERROR] There are ${#ER[@]} clients with errors"
 		BODY+="There are ${#ER[@]} clients with backups in <font color=\"red\">ERROR</font> state: <br /><font color=\"red\">"
@@ -34,7 +42,7 @@ sendReport() {
 		BODY+="</font><br />"
 	fi
 
-	if [ -z "$OK" ] && [ -z "$WR" ] && [ -z "$ER" ]; then
+	if [ -z "$OK" ] && [ -z "$WR" ] && [ -z "$ER" ] && [ -z "$NP" ]; then
 		SUBJECT="[ERROR] NO backups to check, Is it correct?"
 		BODY+="<font color=\"red\">NO backups to check Is it correct?</font><br />"
 	fi
@@ -51,6 +59,7 @@ parseEmail() {
 	local CLIENTS_OK=""
 	local CLIENTS_WR=""
 	local CLIENTS_ER=""
+	local CLIENTS_NP=""
 
  	[ ! -d $ARCHIVED ] && mkdir -p ${ARCHIVED}
 
@@ -90,7 +99,7 @@ parseEmail() {
 				mv ${INBOX}/${MAIL} ${CLIENTS_BASE}/${CLI}
 				CLIENTS_ER+=" ${CLI}"
 			else
-				CLIENTS_ER+=" ${CLI}"
+				CLIENTS_NP+=" ${CLI}"
 			fi
 		done
 	done
@@ -99,7 +108,7 @@ parseEmail() {
 	echo "[ARVCHIVING] Sending NON processed emails to ${ARCHIVED} directory"
 	mv ${INBOX}/*.eml ${ARCHIVED}
 
-	sendReport "${CLIENTS_OK}" "${CLIENTS_WR}" "${CLIENTS_ER}"
+	sendReport "${CLIENTS_OK}" "${CLIENTS_WR}" "${CLIENTS_ER}" "${CLIENTS_NP}"
 }
 
 compressEmails(){
