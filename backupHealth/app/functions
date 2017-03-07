@@ -17,30 +17,30 @@ sendReport() {
 	if [ ! -z "$OK" ]; then
 		SUBJECT="[OK] There are ${#OK[@]} backups correct"
 		BODY+="There are ${#OK[@]} clients with backups in <font color=\"green\">OK</font> state: <br /><font color=\"green\">"
-		for host in ${OK[*]}; do BODY+=" > ${host}<br />"; done
+		for CLT in ${OK[*]}; do BODY+=" > ${CLT}<br />"; done
 		BODY+="</font><br />"
 	fi
 
 	if [ ! -z "$WR" ]; then
 		SUBJECT="[WARNING] There are ${#WR[@]} clients with warning"
 		BODY+="There are ${#WR[@]} clients with backups in <font color=\"orange\">WARNING</font> state: <br /><font color=\"orange\">"
-		for host in ${WR[*]}; do BODY+=" > ${host}<br />"; done
+		for CLT in ${WR[*]}; do BODY+=" > ${CLT}<br />"; done
+		BODY+="</font><br />"
+	fi
+
+	if [ ! -z "$ER" ]; then
+		SUBJECT="[ERROR] There are ${#ER[@]} clients with errors"
+		BODY+="There are ${#ER[@]} clients with backups in <font color=\"red\">ERROR</font> state: <br /><font color=\"red\">"
+		for CLT in ${ER[*]}; do BODY+=" > ${CLT}<br />"; done
 		BODY+="</font><br />"
 	fi
 
         if [ ! -z "$NP" ]; then
                 SUBJECT="[ERROR] There are ${#NP[@]} clients without backup report"
-                BODY+="There are ${#ER[@]} clients without backup report in <font color=\"red\">ERROR</font> state: <br /><font color=\"red\">"
-                for host in ${NP[*]}; do BODY+=" > ${host}<br />"; done
+                BODY+="There are ${#NP[@]} clients without backup report in <font color=\"purple\">ERROR</font> state: <br /><font color=\"purple\">"
+                for CLT in ${NP[*]}; do BODY+=" > ${CLT}<br />"; done
                 BODY+="</font><br />"
         fi
-
-	if [ ! -z "$ER" ]; then
-		SUBJECT="[ERROR] There are ${#ER[@]} clients with errors"
-		BODY+="There are ${#ER[@]} clients with backups in <font color=\"red\">ERROR</font> state: <br /><font color=\"red\">"
-		for host in ${ER[*]}; do BODY+=" > ${host}<br />"; done
-		BODY+="</font><br />"
-	fi
 
 	if [ -z "$OK" ] && [ -z "$WR" ] && [ -z "$ER" ] && [ -z "$NP" ]; then
 		SUBJECT="[ERROR] NO backups to check, Is it correct?"
