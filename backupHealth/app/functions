@@ -89,6 +89,8 @@ parseEmail() {
 			elif  (grep "^Subject.*Fallo.*${CLI}" ${INBOX}/${MAIL}); then
 				mv ${INBOX}/${MAIL} ${CLIENTS_BASE}/${CLI}
 				CLIENTS_ER+=" ${CLI}"
+			else
+				CLIENTS_ER+=" ${CLI}"
 			fi
 		done
 	done
