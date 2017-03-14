@@ -49,4 +49,4 @@ function get_plugins () {
 # Inicio
 nagios_user
 get_plugins
-logger "Nagios Script ejecutado con exito..."
+logger "[INFO] Sucess..."
