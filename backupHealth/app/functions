@@ -83,10 +83,22 @@ parseEmail() {
 			elif (grep "^Subject.*Correcto.*${CLI}" ${INBOX}/${MAIL}); then
 				mv ${INBOX}/${MAIL} ${CLIENTS_BASE}/${CLI}
 				CLIENTS_OK+=" ${CLI}"
+			elif (grep "^Subject.*Success.*${CLI}" ${INBOX}/${MAIL}); then
+				mv ${INBOX}/${MAIL} ${CLIENTS_BASE}/${CLI}
+				CLIENTS_OK+=" ${CLI}"
 			elif (grep "^Subject.*satisfactorio.*${CLI}" ${INBOX}/${MAIL}); then
 				mv ${INBOX}/${MAIL} ${CLIENTS_BASE}/${CLI}
 				CLIENTS_OK+=" ${CLI}"
+			elif (grep "^Subject.*satisfactoria.*${CLI}" ${INBOX}/${MAIL}); then
+				mv ${INBOX}/${MAIL} ${CLIENTS_BASE}/${CLI}
+				CLIENTS_OK+=" ${CLI}"
 			elif  (grep "^Subject.*Aviso.*${CLI}" ${INBOX}/${MAIL}); then
+				mv ${INBOX}/${MAIL} ${CLIENTS_BASE}/${CLI}
+				CLIENTS_WR+=" ${CLI}"
+			elif  (grep "^Subject.*Warning.*${CLI}" ${INBOX}/${MAIL}); then
+				mv ${INBOX}/${MAIL} ${CLIENTS_BASE}/${CLI}
+				CLIENTS_WR+=" ${CLI}"	
+			elif  (grep "^Subject.*avisos.*${CLI}" ${INBOX}/${MAIL}); then
 				mv ${INBOX}/${MAIL} ${CLIENTS_BASE}/${CLI}
 				CLIENTS_WR+=" ${CLI}"
 			elif  (grep "^Subject.*perdida.*${CLI}" ${INBOX}/${MAIL}); then
@@ -96,6 +108,9 @@ parseEmail() {
 				mv ${INBOX}/${MAIL} ${CLIENTS_BASE}/${CLI}
 				CLIENTS_ER+=" ${CLI}"
 			elif  (grep "^Subject.*Fallo.*${CLI}" ${INBOX}/${MAIL}); then
+				mv ${INBOX}/${MAIL} ${CLIENTS_BASE}/${CLI}
+				CLIENTS_ER+=" ${CLI}"
+			elif  (grep "^Subject.*Failed.*${CLI}" ${INBOX}/${MAIL}); then
 				mv ${INBOX}/${MAIL} ${CLIENTS_BASE}/${CLI}
 				CLIENTS_ER+=" ${CLI}"
 			else
