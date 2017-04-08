@@ -35,12 +35,12 @@ sendReport() {
 		BODY+="</font><br />"
 	fi
 
-        if [ ! -z "$NP" ]; then
-                SUBJECT="[ERROR] There are ${#NP[@]} clients without backup report"
-                BODY+="There are ${#NP[@]} clients without backup report in <font color=\"purple\">ERROR</font> state: <br /><font color=\"purple\">"
-                for CLT in ${NP[*]}; do BODY+=" > ${CLT}<br />"; done
-                BODY+="</font><br />"
-        fi
+    if [ ! -z "$NP" ]; then
+            SUBJECT="[ERROR] There are ${#NP[@]} clients without backup report"
+            BODY+="There are ${#NP[@]} clients <font color=\"purple\">WITHOUT</font> backup report:<br /><font color=\"purple\">"
+            for CLT in ${NP[*]}; do BODY+=" > ${CLT}<br />"; done
+            BODY+="</font><br />"
+    fi
 
 	if [ -z "$OK" ] && [ -z "$WR" ] && [ -z "$ER" ] && [ -z "$NP" ]; then
 		SUBJECT="[ERROR] NO backups to check, Is it correct?"
@@ -60,6 +60,7 @@ parseEmail() {
 	local CLIENTS_WR=""
 	local CLIENTS_ER=""
 	local CLIENTS_NP=""
+	local FLAG=false
 
  	[ ! -d $ARCHIVED ] && mkdir -p ${ARCHIVED}
 
@@ -71,52 +72,66 @@ parseEmail() {
 			if (grep "^Subject.*${CLI}.*successful" ${INBOX}/${MAIL}); then
 				mv ${INBOX}/${MAIL} ${CLIENTS_BASE}/${CLI}
 				CLIENTS_OK+=" ${CLI}"
+				FLAG=true
 			elif (grep "^Subject.*${CLI}.*failed" ${INBOX}/${MAIL}); then
 				mv ${INBOX}/${MAIL} ${CLIENTS_BASE}/${CLI}
 				CLIENTS_ER+=" ${CLI}"
+				FLAG=true
 			fi
 
 			# Checking other emails
 			if (grep "^Subject.*correctamente.*${CLI}" ${INBOX}/${MAIL}); then
 				mv ${INBOX}/${MAIL} ${CLIENTS_BASE}/${CLI}
 				CLIENTS_OK+=" ${CLI}"
+				FLAG=true
 			elif (grep "^Subject.*Correcto.*${CLI}" ${INBOX}/${MAIL}); then
 				mv ${INBOX}/${MAIL} ${CLIENTS_BASE}/${CLI}
 				CLIENTS_OK+=" ${CLI}"
+				FLAG=true
 			elif (grep "^Subject.*Success.*${CLI}" ${INBOX}/${MAIL}); then
 				mv ${INBOX}/${MAIL} ${CLIENTS_BASE}/${CLI}
 				CLIENTS_OK+=" ${CLI}"
+				FLAG=true
 			elif (grep "^Subject.*satisfactorio.*${CLI}" ${INBOX}/${MAIL}); then
 				mv ${INBOX}/${MAIL} ${CLIENTS_BASE}/${CLI}
 				CLIENTS_OK+=" ${CLI}"
+				FLAG=true
 			elif (grep "^Subject.*satisfactoria.*${CLI}" ${INBOX}/${MAIL}); then
 				mv ${INBOX}/${MAIL} ${CLIENTS_BASE}/${CLI}
 				CLIENTS_OK+=" ${CLI}"
+				FLAG=true
 			elif  (grep "^Subject.*Aviso.*${CLI}" ${INBOX}/${MAIL}); then
 				mv ${INBOX}/${MAIL} ${CLIENTS_BASE}/${CLI}
 				CLIENTS_WR+=" ${CLI}"
+				FLAG=true
 			elif  (grep "^Subject.*Warning.*${CLI}" ${INBOX}/${MAIL}); then
 				mv ${INBOX}/${MAIL} ${CLIENTS_BASE}/${CLI}
-				CLIENTS_WR+=" ${CLI}"	
+				CLIENTS_WR+=" ${CLI}"
+				FLAG=true
 			elif  (grep "^Subject.*avisos.*${CLI}" ${INBOX}/${MAIL}); then
 				mv ${INBOX}/${MAIL} ${CLIENTS_BASE}/${CLI}
 				CLIENTS_WR+=" ${CLI}"
+				FLAG=true
 			elif  (grep "^Subject.*perdida.*${CLI}" ${INBOX}/${MAIL}); then
 				mv ${INBOX}/${MAIL} ${CLIENTS_BASE}/${CLI}
 				CLIENTS_WR+=" ${CLI}"
+				FLAG=true
 			elif (grep "^Subject.*con.*errores.*${CLI}" ${INBOX}/${MAIL}); then
 				mv ${INBOX}/${MAIL} ${CLIENTS_BASE}/${CLI}
 				CLIENTS_ER+=" ${CLI}"
+				FLAG=true
 			elif  (grep "^Subject.*Fallo.*${CLI}" ${INBOX}/${MAIL}); then
 				mv ${INBOX}/${MAIL} ${CLIENTS_BASE}/${CLI}
 				CLIENTS_ER+=" ${CLI}"
+				FLAG=true
 			elif  (grep "^Subject.*Failed.*${CLI}" ${INBOX}/${MAIL}); then
 				mv ${INBOX}/${MAIL} ${CLIENTS_BASE}/${CLI}
 				CLIENTS_ER+=" ${CLI}"
-			else
-				CLIENTS_NP+=" ${CLI}"
+				FLAG=true
 			fi
 		done
+		[ "$FLAG" = false ] && CLIENTS_NP+=" ${CLI}"
+		FLAG=false
 	done
 
 	# Spam mails will be archived
