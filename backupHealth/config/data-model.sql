@@ -22,6 +22,7 @@ CREATE TABLE `backup_type`
     PRIMARY KEY (`type_id`)
 )ENGINE=InnoDB;
 
+
 INSERT INTO backup_type (type) VALUES ('ms');
 INSERT INTO backup_type (type) VALUES ('mf');
 

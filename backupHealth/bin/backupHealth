@@ -22,7 +22,7 @@ APP="${BASE}/app"
 
 # -------- Functions --------
 for script in `find $APP -type f -name "*.sh"`; do
-	. ${APP}/functions;
+	. ${script};
 done
 
 
