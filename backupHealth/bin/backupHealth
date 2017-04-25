@@ -21,7 +21,9 @@ TOTAL_CLIENTS=$(ls ${CLIENTS_BASE} | wc -l)
 APP="${BASE}/app"
 
 # -------- Functions --------
-. ${APP}/functions
+for script in `find $APP -type f -name "*.sh"`; do
+	. ${APP}/functions;
+done
 
 
 # -------- MAIN --------
