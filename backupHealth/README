@@ -16,7 +16,9 @@
 6. Final Tree
      /opt/backupHealth
      ├── app
-     │   └── functions
+     │   ├── functions.sh
+     │   ├── loggin.sh
+     │   └── mysql.sh
      ├── archived
      ├── bin
      │   ├── backupHealth
@@ -25,10 +27,14 @@
      │   ├── CLIENT1
      │   └── vzdump
      ├── config
-     │   └── fetchmailrc
+     │   ├── data-model.sql
+     │   ├── fetchmailrc
+     │   └── mysql
      ├── inbox
      ├── logs
      └── README
+
+
 
 7. Set the program as a cron task. Choose your user.
 
