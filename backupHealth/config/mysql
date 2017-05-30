@@ -1,4 +1,4 @@
-MYSQL_SERVER="192.168.1.100"
+MYSQL_SERVER="localhost
 MYSQL_PORT="3306"
 MYSQL_DB="backupHealth"
 MYSQL_USER="backupHealth"

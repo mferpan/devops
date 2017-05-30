@@ -6,25 +6,30 @@ CONF_DIR="${BASE}/config"
 CLIENTS_BASE="${BASE}/clients"
 ARCHIVED="${BASE}/archived"
 VZ_FOLDER="${CLIENTS_BASE}/vzdump"
-LOGS_DIR="${BASE}/logs"
+LOG_DIR="${BASE}/logs"
 INBOX="${BASE}/inbox"
 FM_CMD="/usr/bin/fetchmail"
 
 DATE=$(date +%Y%m%d)
-LOG="${LOGS_DIR}/fetchmailrc-${DATE}.log"
+LOG="${LOG_DIR}/${DATE}.log"
 COMPRESS_DAY="1"
 
-REPORT_MAIL_ADDRESS="glpi@inovages.es"
-SENDER="backup@grupoinova.es"
+REPORT_MAIL_ADDRESS="manuel@mfernandez.es"
+SENDER="backup@mfernandez.es"
+
+LOG_RETENTION_DAYS="90"
 
 TOTAL_CLIENTS=$(ls ${CLIENTS_BASE} | wc -l)
 APP="${BASE}/app"
+
+# MySQL Vars
+[ -f ${CONF_DIR}/mysql ] && . ${CONF_DIR}/mysql || exit 1
 
 # -------- Functions --------
 for script in `find $APP -type f -name "*.sh"`; do
 	. ${script};
 done
 
-
 # -------- MAIN --------
-[ "$1" = "auto" ] && download  || menu
+info " ____ STARTED ____"
+[ "$1" = "auto" ] && download || menu

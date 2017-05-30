@@ -1,9 +1,26 @@
 #!/bin/bash
 
-MYSQL_SERVER="192.168.1.100"
-MYSQL_PORT="3306"
-MYSQL_DB="backupHealth"
-MYSQL_USER="backupHealth"
-MYSQL_PASS="backupHealth"
+# @return clients to check
+function getClients {
+    info " __ Getting clients from database"
 
-MYSQL_CMD="mysql -s -u ${MYSQL_USER} -p${MYSQL_PASS} ${MYSQL_DB} -h ${MYSQL_SERVER} -P ${MYSQL_PORT}"
+    [[ $(date +%u) -gt 5 ]] && DOW="MS" || DOW="MF"
+    SQL="SELECT name FROM $MYSQL_DATABASE.clients where backup_type_id=(select type_id from backup_type where type='${DOW}');"
+    
+    CLIENTS=`echo $SQL | $MYSQL_CMD`
+
+    if [ -z "$CLIENTS" ]; then
+        info " __ Found 0 clients to be processed"
+    else
+        info " __ Found $((${#CLIENTS[@]} +2)) clients to be processed"
+    fi
+}
+
+function insertStatus {
+    local CL=$1
+    local ST=$2
+
+    info " __ __ Status $ST for client $CL"
+    SQL_STATUS="INSERT INTO backup_report (client_id,report_date,status) VALUES ((SELECT client_id from clients WHERE client_id=\"$CL\"),NOW(),$ST);"
+    echo $SQL_STATUS | $MYSQL_CMD
+}

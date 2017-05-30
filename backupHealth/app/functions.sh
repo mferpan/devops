@@ -1,13 +1,13 @@
 #!/bin/bash
 
-downloadEmail() {
+function downloadEmail() {
         [ ! -d ${INBOX} ] && mkdir -p ${INBOX}
         [ ! -f ${LOG} ] && touch ${LOG}
-        echo "# -------------- Mail Download Process starting - $(date +%Y/%m/%d-%H:%M:%S) -------------- #" >> ${LOG}
+        info " __ Mail Download Process starting"
         ${FM_CMD} --fetchmailrc ${CONF_DIR}/fetchmailrc --logfile ${LOG}
 }
 
-sendReport() {
+function sendReport() {
     local OK=($(echo "$1" | tr ' ' '\n' | sort -u | tr '\n' ' '))
     local WR=($(echo "$2" | tr ' ' '\n' | sort -u | tr '\n' ' '))
     local ER=($(echo "$3" | tr ' ' '\n' | sort -u | tr '\n' ' '))
@@ -47,17 +47,12 @@ sendReport() {
 		BODY+="<font color=\"red\">NO backups to check Is it correct?</font><br />"
 	fi
 
-	echo "${BODY}" >> ${LOG}
-	echo -e "\n\n" >> ${LOG}
-
 	echo "${BODY}" | mutt -e "set realname=\"${SENDER}\"" -e "set content_type=text/html" -s "${SUBJECT}" "${REPORT_MAIL_ADDRESS}"
 }
 
 
-parseEmail() {
-	#local CLIENTS=$(ls ${CLIENTS_BASE})
-	local CLIENTS=$(echo "SELECT name FROM clients" | ${MYSQL_CMD})
-
+function parseEmail() {
+	getClients
 
 	local CLIENTS_OK=""
 	local CLIENTS_WR=""
@@ -66,6 +61,7 @@ parseEmail() {
 	local FLAG=false
 
  	[ ! -d $ARCHIVED ] && mkdir -p ${ARCHIVED}
+ 	[ -z "$CLIENTS" ] && error "NO clients found in the database"
 
 	TOTAL_EMAILS=$(ls ${INBOX} | wc -l)
 
@@ -75,46 +71,57 @@ parseEmail() {
 			if (grep -E "^Subject.*${CLI}.*successful" ${INBOX}/${MAIL}); then
 				mv ${INBOX}/${MAIL} ${CLIENTS_BASE}/${CLI}
 				CLIENTS_OK+=" ${CLI}"
+				insertStatus ${CLI} 0
 				FLAG=true
 			elif (grep -E "^Subject.*${CLI}.*failed" ${INBOX}/${MAIL}); then
 				mv ${INBOX}/${MAIL} ${CLIENTS_BASE}/${CLI}
 				CLIENTS_ER+=" ${CLI}"
+				insertStatus ${CLI} 2
 				FLAG=true
 			fi
 
-			# Checking other emails
+			# Checking another emails
 			if (grep -E "^Subject.*(correctamente|Correcto|Success|satisfactorio|satisfactoria).*${CLI}" ${INBOX}/${MAIL}); then
 				mv ${INBOX}/${MAIL} ${CLIENTS_BASE}/${CLI}
 				CLIENTS_OK+=" ${CLI}"
+				insertStatus ${CLI} 0
 				FLAG=true
 			elif  (grep -E "^Subject.*(Aviso|Warning|avisos|perdida).*${CLI}" ${INBOX}/${MAIL}); then
 				mv ${INBOX}/${MAIL} ${CLIENTS_BASE}/${CLI}
 				CLIENTS_WR+=" ${CLI}"
+				insertStatus ${CLI} 1
 				FLAG=true
 			elif (grep -E "^Subject.*con.*(errores|Fallo|Failed).*${CLI}" ${INBOX}/${MAIL}); then
 				mv ${INBOX}/${MAIL} ${CLIENTS_BASE}/${CLI}
 				CLIENTS_ER+=" ${CLI}"
+				insertStatus ${CLI} 2
 				FLAG=true
 			fi
 		done
-		[ "$FLAG" = false ] && CLIENTS_NP+=" ${CLI}"
+		if [ "$FLAG" = false ]; then
+			CLIENTS_NP+=" ${CLI}"
+			insertStatus ${CLI} 3
+		fi
 		FLAG=false
 	done
 
 	# Spam mails will be archived
-	echo "[ARVCHIVING] Sending NON processed emails to ${ARCHIVED} directory" >> ${LOG}
+	info " __ Sending NON processed emails to ${ARCHIVED} directory"
 	mv ${INBOX}/*.eml ${ARCHIVED}
 
 	sendReport "${CLIENTS_OK}" "${CLIENTS_WR}" "${CLIENTS_ER}" "${CLIENTS_NP}"
+
+	# Clean variable
+	unset CLIENTS
 }
 
-compressEmails(){
+function compressEmails(){
 	local D=$(date +%Y%m -d 'last month')
 
 	for C in $(ls ${CLIENTS_BASE}); do
 		TAR_DIR="${CLIENTS_BASE}/${C}/${D}"
 
-		[ $(ls ${CLIENTS_BASE}/${C}/*.eml | wc -l) -eq 0 ] && continue
+		[ "$(ls -A ${CLIENTS_BASE}/${C}/*.eml 2>&1)" ] && continue
 
 		mkdir -p ${TAR_DIR}
 		mv ${CLIENTS_BASE}/${C}/*.eml ${TAR_DIR}
@@ -124,22 +131,14 @@ compressEmails(){
 	done
 }
 
-cleanLogs() {
-	find ${LOGS_DIR} -mtime +31 -type f -delete
-}
-
-cleanArchived() {
-	find ${ARCHIVED} -mtime +31 -type f -delete
-}
-
-listClients() {
+function listClients() {
 	echo "There are ${TOTAL_CLIENTS[*]} clients"
 	for C in $(ls ${CLIENTS_BASE}); do
 		echo "   ---> ${C}"
 	done
 }
 
-createClient() {
+function createClient() {
 	local NAME
 
 	echo "Insert client name: "
@@ -150,24 +149,23 @@ createClient() {
 	[ $? -eq 0 ] && echo "[INFO] Client ${NAME} created sucessfully"
 }
 
-prepareInbox() {
+function prepareInbox() {
 	mv ${ARCHIVED}/* ${INBOX}/
 }
 
-download() {
-	echo "[START] Prepare previous mails to be processed" >> ${LOG}
+function download() {
+	info " __ Prepare previous emails to be processed"
 	prepareInbox
 
-	echo "[START] Downloading emails process has started" >> ${LOG}
+	info " __ Downloading emails process has started"
 	downloadEmail
 	parseEmail
-	cleanLogs
-	cleanArchived
+	rotate_logs
 	[ $(date +%e) -eq ${COMPRESS_DAY} ] && compressEmails
-	echo "[FINISH]" >> ${LOG}
+	info " ____ FINISHED ____"
 }
 
-menu() {
+function menu() {
 	PS3='Please enter your choice: '
 	options=("List Clients" "Create New Client" "Quit")
 	select opt in "${options[@]}"
