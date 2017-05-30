@@ -14,25 +14,25 @@
 	SENDER="backup-verifier@mfernandez.es"
 
 6. Final Tree
-     /opt/backupHealth
-     ├── app
-     │   ├── functions.sh
-     │   ├── loggin.sh
-     │   └── mysql.sh
-     ├── archived
-     ├── bin
-     │   ├── backupHealth
-     │   └── fetchmailhandler
-     ├── clients
-     │   ├── CLIENT1
-     │   └── vzdump
-     ├── config
-     │   ├── data-model.sql
-     │   ├── fetchmailrc
-     │   └── mysql
-     ├── inbox
-     ├── logs
-     └── README
+	/opt/backupHealth
+	├── app
+	│   ├── functions.sh
+	│   ├── loggin.sh
+	│   └── mysql.sh
+	├── archived
+	├── bin
+	│   ├── backupHealth
+	│   └── fetchmailhandler
+	├── clients
+	│   ├── CLIENT1
+	│   └── vzdump
+	├── config
+	│   ├── data-model.sql
+	│   ├── fetchmailrc
+	│   └── mysql
+	├── inbox
+	├── logs
+	└── README
 
 
 
